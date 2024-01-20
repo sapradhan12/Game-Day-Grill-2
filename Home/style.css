@@ -1,0 +1,412 @@
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Michroma", sans-serif;
+}
+
+body {
+  background-color: #0E0001;
+  color: #FFFFFF;
+}
+
+#header-mobile {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+#header-mobile #top {
+  width: 100%;
+  height: 4rem;
+  background-color: #0E0001;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#header-mobile #top #after {
+  display: none;
+}
+#header-mobile #top i {
+  position: absolute;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: #EF9834;
+}
+#header-mobile #top i:hover {
+  cursor: pointer;
+}
+#header-mobile #top img {
+  height: 2.5rem;
+}
+#header-mobile #container {
+  display: none;
+}
+#header-mobile #container #bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+#header-mobile #container #bottom a {
+  text-decoration: none;
+  color: #EF9834;
+  padding: 0 0 2rem 0;
+}
+#header-mobile #container #bottom a:hover {
+  text-decoration: underline;
+}
+
+#header-laptop {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  height: 8rem !important;
+  display: flex;
+  display: none;
+}
+#header-laptop #top {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 6rem;
+  justify-content: space-between;
+}
+#header-laptop img {
+  height: 4.5rem;
+}
+#header-laptop #nav {
+  display: flex;
+  justify-content: space-around;
+}
+#header-laptop #nav a {
+  text-decoration: none;
+  color: #EF9834;
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  border: 2px solid #EF9834;
+  color: white;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.3);
+  background-color: #EF9834;
+}
+
+@media only screen and (min-width: 850px) {
+  #header-mobile #top {
+    height: 6rem;
+  }
+  #header-mobile #top img {
+    height: 4.5rem;
+  }
+  #header-mobile #top i {
+    font-size: 2.7rem;
+  }
+}
+@media only screen and (min-width: 850px) {
+  #header-mobile {
+    display: none;
+  }
+  #header-laptop {
+    display: block;
+  }
+}
+#first {
+  width: 100%;
+  position: relative;
+}
+#first #right {
+  top: 4rem;
+  width: 100%;
+  overflow-y: hidden;
+}
+#first #right #fire {
+  transform: rotate(270deg);
+  height: 100vh;
+  position: relative;
+  right: 0rem;
+}
+#first #right #picture {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -35%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#first #right #picture img {
+  width: 50%;
+  position: relative;
+}
+#first #right #picture #sandwich_top {
+  top: 0;
+  z-index: 7;
+}
+#first #right #picture #bacon {
+  top: -1rem;
+  z-index: 6;
+}
+#first #right #picture #ham {
+  top: -3rem;
+  z-index: 5;
+}
+#first #right #picture #chili {
+  top: -4rem;
+  z-index: 4;
+}
+#first #right #picture #tomato {
+  top: -4rem;
+  z-index: 3;
+}
+#first #right #picture #lectus {
+  top: -14rem;
+  z-index: 2;
+}
+#first #right #picture #sandwich_bottom {
+  top: -14rem;
+  z-index: 1;
+}
+#first #right #blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow-y: hidden;
+  height: 100vh;
+  display: none;
+}
+#first #right #blur #smoke {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  width: 100%;
+  height: 100vh;
+  animation: 3s linear 1s infinite alternate smoke;
+  z-index: 0;
+}
+#first #right #blur #salt1 {
+  position: relative;
+  top: 10%;
+  left: -50%;
+  transform: rotate(270deg);
+  width: 98%;
+  filter: blur(5px);
+  animation: 3s linear 1s infinite alternate salt1;
+}
+#first #right #blur #salt2 {
+  position: absolute;
+  top: 0;
+  right: -5%;
+  width: 40%;
+  filter: blur(2px);
+  animation: 3s linear 1s infinite alternate salt2;
+}
+@keyframes smoke {
+  from {
+    width: 100%;
+    opacity: 0.5;
+  }
+  to {
+    width: 130%;
+    opacity: 0.2;
+  }
+}
+@keyframes salt1 {
+  from {
+    top: 10%;
+    left: -50%;
+    width: 98%;
+    filter: blur(5px);
+  }
+  to {
+    top: 12%;
+    left: -48%;
+    width: 100%;
+    filter: blur(1px);
+  }
+}
+@keyframes salt2 {
+  from {
+    top: 0%;
+    right: -5%;
+    width: 48%;
+    filter: blur(2px);
+  }
+  to {
+    top: -2%;
+    right: -3%;
+    width: 50%;
+    filter: blur(0px);
+  }
+}
+#first #left {
+  padding-left: 4rem;
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+#first #left h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+}
+#first #left p {
+  margin: 1rem 0;
+}
+
+@media only screen and (min-width: 500px) {
+  #first #right #picture {
+    width: 30rem;
+    right: 5% !important;
+  }
+  #first #left {
+    width: 50%;
+  }
+  #first #left h1 {
+    font-size: 3rem !important;
+  }
+  #first #left p {
+    margin: 2rem 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #first #right #picture {
+    width: 30rem;
+    left: 50%;
+    transform: translate(-50%, -20%);
+  }
+  #first #right #picture #sandwich_top {
+    top: 0.4rem;
+    z-index: 8;
+    animation: 3s linear 1s infinite alternate sandwich_top;
+  }
+  #first #right #picture #bacon {
+    top: -2rem;
+    z-index: 7;
+    animation: 3s linear 1s infinite alternate bacon;
+  }
+  #first #right #picture #ham {
+    top: -5rem;
+    z-index: 6;
+    animation: 3s linear 1s infinite alternate ham;
+  }
+  #first #right #picture #chili {
+    top: -8rem;
+    z-index: 5;
+    animation: 3s linear 1s infinite alternate chili;
+  }
+  #first #right #picture #tomato {
+    top: -18rem;
+    z-index: 4;
+    animation: 3s linear 1s infinite alternate tomatoA;
+  }
+  #first #right #picture #lectus {
+    top: -28rem;
+    z-index: 3;
+    animation: 3s linear 1s infinite alternate lectus;
+  }
+  #first #right #picture #sandwich_bottom {
+    top: -33rem;
+    z-index: 2;
+    animation: 3s linear 1s infinite alternate sandwich_bottom;
+  }
+  @keyframes sandwich_top {
+    from {
+      top: 0.4rem;
+      left: -0.3rem;
+    }
+    to {
+      top: -0.1rem;
+      left: 0.6rem;
+    }
+  }
+  @keyframes chili {
+    from {
+      top: -8rem;
+      left: 0.3rem;
+    }
+    to {
+      top: -7.5rem;
+      left: -0.6rem;
+    }
+  }
+  @keyframes bacon {
+    from {
+      top: -2rem;
+    }
+    to {
+      top: -1rem;
+    }
+  }
+  @keyframes tomatoA {
+    from {
+      left: -0.7rem;
+    }
+    to {
+      left: 0.6rem;
+    }
+  }
+  @keyframes ham {
+    from {
+      top: -5rem;
+      left: 0.3rem;
+    }
+    to {
+      top: -5.5rem;
+      left: -0.6rem;
+    }
+  }
+  @keyframes lectus {
+    from {
+      top: -28rem;
+    }
+    to {
+      top: -27.5rem;
+    }
+  }
+  @keyframes sandwich_bottom {
+    from {
+      top: -33rem;
+      left: -0.3rem;
+    }
+    to {
+      top: -33.5rem;
+      left: 0.6rem;
+    }
+  }
+  #first #right #blur {
+    display: block;
+  }
+  #first #left {
+    width: 30%;
+    margin-left: 2rem;
+  }
+  #first #left h1 {
+    font-size: 3.5rem !important;
+    line-height: 4rem;
+  }
+  #first #left p {
+    margin: 2rem 0;
+  }
+}/*# sourceMappingURL=style.css.map */

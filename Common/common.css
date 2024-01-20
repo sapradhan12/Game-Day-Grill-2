@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Michroma", sans-serif;
+}
+
+body {
+  background-color: #0E0001;
+  color: #FFFFFF;
+}
+
+#header-mobile {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+#header-mobile #top {
+  width: 100%;
+  height: 4rem;
+  background-color: #0E0001;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#header-mobile #top #after {
+  display: none;
+}
+#header-mobile #top i {
+  position: absolute;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: #EF9834;
+}
+#header-mobile #top i:hover {
+  cursor: pointer;
+}
+#header-mobile #top img {
+  height: 2.5rem;
+}
+#header-mobile #container {
+  display: none;
+}
+#header-mobile #container #bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+#header-mobile #container #bottom a {
+  text-decoration: none;
+  color: #EF9834;
+  padding: 0 0 2rem 0;
+}
+#header-mobile #container #bottom a:hover {
+  text-decoration: underline;
+}
+
+#header-laptop {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  height: 8rem !important;
+  display: flex;
+  display: none;
+}
+#header-laptop #top {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 6rem;
+  justify-content: space-between;
+}
+#header-laptop img {
+  height: 4.5rem;
+}
+#header-laptop #nav {
+  display: flex;
+  justify-content: space-around;
+}
+#header-laptop #nav a {
+  text-decoration: none;
+  color: #EF9834;
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  border: 2px solid #EF9834;
+  color: white;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.3);
+  background-color: #EF9834;
+}
+
+@media only screen and (min-width: 850px) {
+  #header-mobile {
+    display: none;
+  }
+  #header-laptop {
+    display: block;
+  }
+}/*# sourceMappingURL=common.css.map */
