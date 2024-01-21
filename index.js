@@ -1,4 +1,6 @@
-let openShopping = document.querySelector('.shopping');
+// the actual js code for ordering is in ordering.js (1/16)
+
+/*let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
 let listCard = document.querySelector('.listCard');
@@ -108,5 +110,30 @@ function changeQuantity(key, quantity){
     reloadCard();
 }
 
+/*
+document.body.addEventListener("click", (ev) => {
+    const isAppetizersTitle = !!ev.target.closest(".appetizers-title-bar");
+    const appetizers = ev.target.closest(".appetizers");
+
+    if(!isAppetizersTitle) {
+        return;
+    }
+    appetizers.classList.toggle("appetizers-open");
+    
+});
 
 
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}*/
