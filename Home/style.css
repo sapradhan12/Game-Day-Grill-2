@@ -2,12 +2,33 @@
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: "Michroma", sans-serif;
 }
 
 body {
   background-color: #0E0001;
   color: #FFFFFF;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
+}
+
+p {
+  font-family: "DM Serif Display", serif;
+  overflow: hidden;
+  line-height: 25px;
+  word-spacing: 1px;
+}
+
+h3 {
+  color: #E55A32;
+  font-family: "Michroma", sans-serif;
+  font-size: 1rem;
+}
+
+h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
 }
 
 #header-mobile {
@@ -110,17 +131,6 @@ button:hover {
 }
 
 @media only screen and (min-width: 850px) {
-  #header-mobile #top {
-    height: 6rem;
-  }
-  #header-mobile #top img {
-    height: 4.5rem;
-  }
-  #header-mobile #top i {
-    font-size: 2.7rem;
-  }
-}
-@media only screen and (min-width: 850px) {
   #header-mobile {
     display: none;
   }
@@ -131,6 +141,7 @@ button:hover {
 #first {
   width: 100%;
   position: relative;
+  overflow-y: hidden;
 }
 #first #right {
   top: 4rem;
@@ -268,11 +279,161 @@ button:hover {
   transform: translate(0, -50%);
 }
 #first #left h1 {
-  font-family: "Playfair Display", serif;
   font-size: 2.2rem;
+  color: #EF9834;
 }
 #first #left p {
   margin: 1rem 0;
+}
+
+#second {
+  padding: 4rem;
+}
+#second img {
+  overflow-y: hidden;
+}
+#second p {
+  color: #CACACA;
+}
+#second #top {
+  padding: 4rem 0;
+  z-index: 1;
+}
+#second #top #left h2 {
+  margin: 0.5rem 0;
+}
+#second #bottom {
+  z-index: 1;
+}
+#second #bottom .rows {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+  width: 100%;
+}
+#second #bottom .rows img {
+  width: 100%;
+}
+#second #bottom .rows h3 {
+  padding: 2rem 0 0.5rem 0;
+}
+#second #bottom div:nth-child(even) .left {
+  order: 2;
+}
+#second #background {
+  width: 100%;
+  height: 250%;
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+#second #background img {
+  position: absolute;
+}
+#second #background img:nth-child(1) {
+  width: 20%;
+  top: 20%;
+  left: 17%;
+}
+#second #background img:nth-child(2) {
+  width: 22%;
+  top: 11%;
+  left: 32%;
+}
+#second #background img:nth-child(3) {
+  width: 15%;
+  top: 27%;
+  left: 40%;
+}
+#second #background img:nth-child(4) {
+  width: 30%;
+  top: 40%;
+  right: 15%;
+}
+#second #background img:nth-child(5) {
+  width: 10%;
+  top: 34%;
+  right: 17%;
+}
+#second #background img:nth-child(6) {
+  width: 20%;
+  top: 50%;
+  left: 40%;
+  transform: rotate(90deg);
+}
+#second #background img:nth-child(7) {
+  width: 17%;
+  top: 65%;
+  left: 15%;
+  transform: rotate(90deg);
+}
+#second #background img:nth-child(8) {
+  width: 10%;
+  top: 59%;
+  left: 15%;
+  transform: rotate(45deg);
+}
+#second #background img:nth-child(9) {
+  width: 17%;
+  top: 70%;
+  left: 40%;
+}
+#second #background img:nth-child(10) {
+  width: 45%;
+  top: 70%;
+  left: 40%;
+}
+#second #background img:nth-child(11) {
+  width: 15%;
+  top: 85%;
+  right: 42%;
+}
+
+#third {
+  overflow: unset;
+  padding: 14%;
+  position: relative;
+  height: 200vh;
+}
+#third #third-container {
+  position: sticky;
+  top: 0;
+}
+#third #intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+#third #intro hr {
+  width: 10%;
+  margin-top: 1%;
+  border: 1px solid #E03C31;
+}
+#third #intro p {
+  padding: 1% 20%;
+}
+#third #vid-wrapper {
+  position: relative;
+  height: 100%;
+}
+#third #vid-wrapper video {
+  width: 100%;
+}
+#third #vid-wrapper #darker {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  box-shadow: 0px 0px 4rem 4rem #0E0001 inset;
+}
+
+#fourth {
+  height: 100vh;
 }
 
 @media only screen and (min-width: 500px) {
@@ -288,6 +449,34 @@ button:hover {
   }
   #first #left p {
     margin: 2rem 0;
+  }
+  #second #bottom .rows {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #second #bottom div:nth-child(even) .left {
+    order: 0;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-right: 5%;
+  }
+  #second #bottom div:nth-child(even) .right {
+    width: 50%;
+  }
+  #second #bottom div:nth-child(odd) .right {
+    order: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 5%;
+  }
+  #second #bottom div:nth-child(odd) .left {
+    width: 50%;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -408,5 +597,67 @@ button:hover {
   }
   #first #left p {
     margin: 2rem 0;
+  }
+  #second {
+    padding: 4rem 20%;
+  }
+  #second #top {
+    display: flex;
+    flex-direction: row;
+  }
+  #second #top #left {
+    width: 50%;
+    text-align: right;
+    padding-right: 10%;
+  }
+  #second #top p {
+    width: 50%;
+  }
+  #second #bottom .rows {
+    padding: 1rem 0;
+  }
+  #second #bottom div:nth-child(1) .left {
+    display: flex;
+    justify-content: right;
+  }
+  #second #bottom div:nth-child(1) .left img {
+    width: 70%;
+    margin-right: 10%;
+  }
+  #second #bottom div:nth-child(1) .right {
+    width: 40%;
+  }
+  #second #bottom div:nth-child(2) .right {
+    width: 53%;
+  }
+  #second #bottom div:nth-child(2) .left {
+    width: 35%;
+    text-align: right;
+  }
+  #second #bottom div:nth-child(3) .left {
+    display: flex;
+    justify-content: right;
+  }
+  #second #bottom div:nth-child(3) .left img {
+    width: 85%;
+    margin-right: 10%;
+  }
+  #second #bottom div:nth-child(3) .right {
+    width: 40%;
+    padding-left: 20%;
+  }
+  #second #bottom div:nth-child(4) .right {
+    width: 50%;
+    margin-left: 15%;
+  }
+  #second #bottom div:nth-child(4) .right img {
+    width: 70%;
+  }
+  #second #bottom div:nth-child(4) .left {
+    width: 35%;
+    text-align: right;
+  }
+  #second #background {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -2,12 +2,33 @@
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: "Michroma", sans-serif;
 }
 
 body {
   background-color: #0E0001;
   color: #FFFFFF;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
+}
+
+p {
+  font-family: "DM Serif Display", serif;
+  overflow: hidden;
+  line-height: 25px;
+  word-spacing: 1px;
+}
+
+h3 {
+  color: #E55A32;
+  font-family: "Michroma", sans-serif;
+  font-size: 1rem;
+}
+
+h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
 }
 
 #header-mobile {

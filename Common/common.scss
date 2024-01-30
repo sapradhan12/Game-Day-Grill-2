@@ -1,6 +1,9 @@
 //FONTS
 $playfair: 'Playfair Display', serif;
 $michroma: 'Michroma', sans-serif;
+$roboto: 'Roboto Condensed', sans-serif;
+$sans: 'Josefin Sans', sans-serif;
+$serif: 'DM Serif Display', serif;
 
 //COLORS:
 $black: #0E0001;
@@ -8,18 +11,39 @@ $yellow: #EF9834;
 $orange: #E55A32;
 $red: #E03C31;
 $white: #FFFFFF;
+$gray: #CACACA;
 
-
+$h1: 2.2rem;
+$h2: 2rem;
+$h3: 1rem;
 *{
     padding:0;
     margin:0;
     overflow-x: hidden;
-    font-family: $michroma;
 }
 body{
     background-color: $black;
     color: $white;
 }
+h1{
+    font-family: $serif;
+}
+p{
+    font-family: $serif;
+    overflow: hidden;
+    line-height: 25px;
+    word-spacing: 1px;
+}
+h3{
+    color: $orange;
+    font-family: $michroma;
+    font-size: $h3;
+}
+h2{
+    font-family: $serif;
+    font-size: $h2;
+}
+
 
 #header-mobile{
     width: 100%;
