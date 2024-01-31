@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+      padding: 20px;
+      display: flex;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .form-container {
+      flex: 1;
+      width: 60%;
+      margin-right: 20px;
+    }
+
+    .order-summary {
+      flex: 1;
+      width: 40%;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .order-item {
+      margin-bottom: 10px;
+    }
+
+    .total-price {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .back-arrow {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <a href="ordering.html">
+    <ion-icon name="arrow-back-outline" class="back-arrow"></ion-icon>
+    </a>
+
+    <h2>Contact Info</h2>
+    <form action="process_payment.php" method="post">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+  
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+  
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+  
+      <h2>Credit Card Info</h2>
+  
+      <label for="cardNumber">Credit Card Number:</label>
+      <input type="text" id="cardNumber" name="cardNumber" required>
+  
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" required>
+  
+      <label for="expiryDate">Expiry Date (MM/YYYY):</label>
+      <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY" required>
+  
+      <label for="zipCode">Billing Zip Code:</label>
+      <input type="text" id="zipCode" name="zipCode" required>
+  
+      <input type="submit" value="Submit Payment">
+    </form>
+  </div>
+
+<div class="order-summary">
+  <h2>Order Summary</h2>
+  <div id="orderItems"></div>
+  <div class="total-price" id="totalPrice">Total Price: $0.00</div>
+</div>
+
+<script>
+  // Retrieve ordered items from localStorage
+  const orderedItems = JSON.parse(localStorage.getItem('orderedItems'));
+
+  // Display ordered items in the order summary section
+  const orderItemsContainer = document.getElementById('orderItems');
+  let totalPrice = 0;
+
+  orderedItems.forEach(item => {
+    const { name, quantity, price } = item;
+    const itemElement = document.createElement('div');
+    itemElement.textContent = `${name} x${quantity} - $${price.toFixed(2)}`;
+    orderItemsContainer.appendChild(itemElement);
+    totalPrice += price;
+  });
+
+  // Update total price
+  document.getElementById('totalPrice').textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+  
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
