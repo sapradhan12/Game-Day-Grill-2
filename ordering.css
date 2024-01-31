@@ -1,4 +1,184 @@
 @import "navbar.css";
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.page-title{
+  margin: 20px 0 0 20px;
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.accordion {
+  width: 60%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.section-header {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chevron {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent #fff;
+  transition: transform 0.3s;
+}
+
+.section-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px 0 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-item img {
+  width: 100px; /* Placeholder width for the image */
+  height: 100px; /* Placeholder height for the image */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.menu-item-name,
+.menu-item-price {
+  margin-top: 5px;
+  text-align: center;
+}
+
+button {
+    margin: 0 0 10px 0;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart {
+  width: 40%;
+  margin: 10px 10px 10px 20px;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  position: sticky;
+  top: 0;
+  height: 90vh;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.cart-content {
+  margin: 10px;
+}
+
+.checkout-bar {
+  position: sticky;
+  bottom: 0;
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin: 0;
+  border-top: 1px solid #ddd;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.total-cost {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.item-name-in-cart {
+  padding-top: 10px;
+  width: 100px;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.quantity {
+  margin: 0 10px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.checkout-button {
+  margin-top: 10px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+/*
 body {
   background-color: #E3E7E8;
   font-family: Arial, Helvetica, sans-serif;
@@ -127,8 +307,7 @@ header .shopping span {
 }
 
 
-/* Style the buttons that are used to open and close the accordion panel */
-/*
+ Style the buttons that are used to open and close the accordion panel 
 .accordion {
   background-color: #eee;
   color: #444;
@@ -223,7 +402,7 @@ header .shopping span {
   color: #fff;
   width: 100%;
   padding: 10px;
-}*/
+}
 
 .card {
   background-color: #DCE0E1;
@@ -353,4 +532,6 @@ header .shopping span {
 .pop-up #reservation i:hover {
   background-color: #E03C31;
   color: #E8BC0E;
-}/*# sourceMappingURL=ordering.css.map */
+}*/
+
+/*# sourceMappingURL=ordering.css.map */

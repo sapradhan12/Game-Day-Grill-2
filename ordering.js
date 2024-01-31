@@ -1,3 +1,98 @@
+function toggleSection(header) {
+    const content = header.nextElementSibling;
+    const chevron = header.querySelector('.chevron');
+    const isOpen = content.style.maxHeight === '0px' || content.style.maxHeight === ''; // Check for both conditions
+  content.style.maxHeight = isOpen ? `${content.scrollHeight}px` : '0';
+    chevron.style.transform = !isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
+}
+
+
+function addToCart(item) {
+// Implement your logic to add the selected item to the cart
+console.log(item + ' added to cart');
+
+// Create cart item element
+const cartItem = document.createElement('div');
+cartItem.classList.add('cart-item');
+cartItem.innerHTML = `
+  <span class="item-name-in-cart">${item}</span>
+  <div class="quantity-container">
+    <button onclick="updateQuantity(this, -1)">-</button>
+    <span class="quantity">1</span>
+    <button onclick="updateQuantity(this, 1)">+</button>
+  </div>
+  <span class="price">$10.00</span>
+  <button onclick="removeFromCart(this)">Remove</button>
+`;
+
+// Append cart item to the cart
+document.getElementById('cartItems').appendChild(cartItem);
+
+// Update total cost
+updateTotalCost();
+}
+
+
+function removeFromCart(button) {
+// Implement your logic to remove the selected item from the cart
+const cartItem = button.parentNode;
+cartItem.parentNode.removeChild(cartItem);
+
+// Update total cost
+updateTotalCost();
+}
+
+function updateQuantity(button, change) {
+const quantityContainer = button.parentNode;
+const quantityElement = quantityContainer.querySelector('.quantity');
+let quantity = parseInt(quantityElement.innerText);
+
+// Update quantity
+quantity += change;
+
+// Remove item if quantity becomes 0
+if (quantity === 0) {
+  const cartItem = quantityContainer.parentNode;
+  cartItem.parentNode.removeChild(cartItem);
+} else {
+  quantityElement.innerText = quantity;
+}
+
+// Update inline price and total cost
+updatePrices();
+updateTotalCost();
+}
+
+function updatePrices() {
+const cartItems = document.querySelectorAll('.cart-item');
+cartItems.forEach(item => {
+  const quantity = parseInt(item.querySelector('.quantity').innerText);
+  const priceElement = item.querySelector('.price');
+  const price = 10 * quantity; // Assuming each item costs $10
+  priceElement.innerText = `$${price.toFixed(2)}`;
+});
+}
+
+function updateTotalCost() {
+const cartItems = document.querySelectorAll('.cart-item');
+let totalCost = 0;
+
+cartItems.forEach(item => {
+  const quantity = parseInt(item.querySelector('.quantity').innerText);
+  totalCost += 10 * quantity; // Assuming each item costs $10
+});
+
+document.getElementById('totalCost').innerText = `Total Cost: $${totalCost.toFixed(2)}`;
+}
+
+function checkout() {
+    window.location.href = "checkout.html";
+}
+
+
+
+
+
 /*var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -11,7 +106,7 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = panel.scrollHeight + "px";
     } 
   });
-}*/
+}
 
 
 const accordion = document.getElementsByClassName("contentbox");
@@ -136,4 +231,4 @@ function changeQuantity(key, quantity){
         listCards[key].price = quantity * products[key].price;
     }
     reloadCard();
-}
+}*/
