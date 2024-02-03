@@ -1,0 +1,270 @@
+@import "../Common/common.scss";
+
+#cart-section{
+    position: relative;
+    z-index: 1;
+    #icon{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: fixed;
+        right: 4%;
+        top: 10%;
+        overflow-y: hidden;
+        transform: scale(1.05);
+        box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.3);
+        #wrapper{
+            background: $red;
+            position: relative;
+            font-size: 10px;
+            height: 15px;
+            display: flex;
+            padding: 0 0 0 5px;
+            align-items:center;
+            p{color: $black;}
+        }
+        #wrapper:before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            border-top: 7.5px solid $black;
+            border-left: 7.5px solid $red;
+            width: 0;
+        }
+        #wrapper:after {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0;
+            border-bottom: 7.5px solid $black;
+            border-left: 7.5px solid $red;
+            width: 0;
+        }
+        #cart{
+            margin-left: .5px;
+            font-size: 15px;
+            color: $red;
+            background-color: $dark-gray;
+            padding: .5rem;
+            border-radius: 50%;
+        }
+    }
+    #icon:hover{
+        cursor: pointer;
+    }
+
+    #your-order{
+        position: fixed;
+        background-color: $dark-gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        right: 0;
+        transform: translate(100%);
+        h1{
+            margin-bottom: 10%;
+            width: 80%;
+            text-align: left;
+        }
+        #middle{
+            width: 80%;
+            height: 50%;
+            .eachMiddle{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 5%;
+                i{
+                    overflow-y: hidden;
+                }
+
+                .amount{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                img{
+                    width: 30%;
+                }
+                .info{
+                    width: 50%;
+                }
+            }
+        }
+        hr{
+            width: 80%;
+        }
+        #bottom{
+            width: 80%;
+            #price{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 5%;
+                h3{
+                    color: $gray;
+                }
+                h2{
+                    font-size: 2.7rem;
+                    color: $yellow;
+                }
+            }
+            #checkout{
+                margin-top: 15%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                #back1{
+                    width: 45%;
+                }
+                #check1{
+                    width: 45%;
+                    background-color: $yellow;
+                    color: $black;
+                }
+            }
+        }
+    }
+    #checkoutColumn{
+        position: fixed;
+        background-color: $dark-gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        right: 0;
+        transform: translate(100%);
+        h1{
+            margin-bottom: 5%;
+            width: 80%;
+            text-align: left;
+        }
+        #buyer{
+            width: 80%;
+            input{
+                width: 100%;
+            }
+        }
+        #checkout{
+            margin-top: 10%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 80%;
+            #back2{
+                width: 45%;
+            }
+            #check2{
+                width: 45%;
+                background-color: $yellow;
+                color: $black;
+            }
+        }
+    }
+}
+#first{
+    width: 100%;
+    padding-top: 5rem;
+    .section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+        .inSection{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .eachFood{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 10%;
+                img{
+                    width: 80%;
+                    transition: all 0.3s;
+                    cursor: pointer;
+                }
+                img:hover{
+                    transform: scale(1.05);
+                    box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.3);
+                }
+                h3{
+                    padding: 1rem 0;
+                }
+                #bottom{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    button{
+                        background-color: $yellow;
+                        border-radius: 0;
+                        margin-left: 1rem;
+                        color: $black;
+                        padding: .2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+//RESPONSIVE
+@media only screen and (min-width: 500px){
+    #cart-section{
+        #your-order{
+            width: 25rem !important;
+        }
+        #checkoutColumn{
+            width: 30rem !important;
+        }
+    }
+    #first{
+        .section{
+            h2{
+                width: 100%;
+                text-align: left;
+                padding-left: 30%;
+            }
+            .inSection{
+                flex-flow: row wrap;
+                width: 100%;
+                .eachFood{
+                    padding: 0;
+                    margin: 5%;
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1000px){
+    #first{
+        .section{
+            h2{
+                width: 80%;
+                padding: 0;
+            }
+            .inSection{
+                justify-content: center;
+                width: 80%;
+                
+                .eachFood{
+                    width: 25%;
+                    margin: 3% 0%;
+                }
+            }
+        }
+    }
+}

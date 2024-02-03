@@ -1,5 +1,119 @@
 gsap.registerPlugin(ScrollTrigger);
 
+//BURGER PARRADOX
+
+gsap.to("#burger",{
+    scrollTrigger:{
+        trigger: "#second",
+        start: "top bottom",
+        scrub: 2,
+        duration:1,
+    },
+    y: -1000,
+    //opacity: 0,
+})
+gsap.to("#green_onion1",{
+    scrollTrigger:{
+        trigger: "#second",
+        start: "top bottom",
+        scrub: 2,
+        duration:1,
+    },
+    y: -2000,
+    //opacity: 0,
+})
+gsap.to("#green_onion2",{
+    scrollTrigger:{
+        trigger: "#second",
+        start: "top bottom",
+        scrub: 2,
+        duration:1,
+    },
+    y: -2000,
+    //opacity: 0,
+})
+gsap.to("#red_onion1",{
+    scrollTrigger:{
+        trigger: "#second",
+        start: "top bottom",
+        scrub: 2,
+        duration:1,
+    },
+    y: -2000,
+    //opacity: 0,
+})
+gsap.to("#red_onion4",{
+    scrollTrigger:{
+        trigger: "#second",
+        start: "top bottom",
+        scrub: 2,
+        duration:1,
+    },
+    y: -2000,
+    //opacity: 0,
+})
+gsap.to("#red_onion2",{
+    scrollTrigger:{
+        trigger: "#second",
+        start: "top bottom",
+        scrub: 2,
+        duration:1,
+    },
+    y: -2000,
+    //opacity: 0,
+})
+gsap.to("#red_onion3",{
+    scrollTrigger:{
+        trigger: "#second",
+        start: "top bottom",
+        scrub: 2,
+        duration:1,
+    },
+    y: -2000,
+    //opacity: 0,
+})
+gsap.to("#tomato1",{
+    scrollTrigger:{
+        trigger: "#second",
+        start: "top bottom",
+        scrub: 2,
+        duration:1,
+    },
+    y: -2000,
+    //opacity: 0,
+})
+gsap.to("#tomato2",{
+    scrollTrigger:{
+        trigger: "#second",
+        start: "top bottom",
+        scrub: 2,
+        duration:1,
+    },
+    y: -2000,
+    //opacity: 0,
+})
+gsap.to("#tomato3",{
+    scrollTrigger:{
+        trigger: "#second",
+        start: "top bottom",
+        scrub: 2,
+        duration:1,
+    },
+    y: -2000,
+    //opacity: 0,
+})
+gsap.to("#tomato4",{
+    scrollTrigger:{
+        trigger: "#second",
+        start: "top bottom",
+        scrub: 2,
+        duration:1,
+    },
+    y: -2000,
+    //opacity: 0,
+})
+
+
 
 
 //ROTATE DISHES
@@ -8,12 +122,11 @@ gsap.to("#salmon",{
         trigger: "#salmon",
         start: "top center",
         scrub: 2,
-        duration:2
+        duration:2,
     },
     rotation: 90,
     //opacity: 0,
 })
-
 gsap.to("#beef",{
     scrollTrigger:{
         trigger: "#beef",

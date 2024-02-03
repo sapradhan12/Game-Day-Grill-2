@@ -3,111 +3,35 @@
 
 #first{
     width: 100%;
-    position: relative;
+    position: fixed;
     overflow-y: hidden;
     #right{
-        top: 4rem;
-        width: 100%;
-        overflow-y: hidden;
         #fire{
-            transform: rotate(270deg);
+            position: absolute;
             height: 100vh;
-            position: relative;
-            right: 0rem
-        }
-        #picture{
-            position: absolute;
-            top: 50%;
-            transform: translate(0, -35%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            img{
-
-                width: 50%;
-                position: relative;
-                //left: 50%;
-                //transform: translate(-50%, 0);
-            }
-            
-            #sandwich_top{
-                top: 0;
-                z-index: 7;
-            }
-            #bacon{
-                top:-1rem;
-                z-index: 6;
-            }
-            #ham{
-                top: -3rem;
-                z-index: 5;
-            }
-            #chili{
-                top:-4rem;
-                z-index: 4;
-            }
-            #tomato{
-                top: -4rem;
-                z-index: 3;
-            }
-            #lectus{
-                top: -14rem;
-                z-index: 2;
-            }
-            #sandwich_bottom{
-                top: -14rem;
-                z-index: 1;
-            }
-        }
-        #blur{
-            position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            overflow-y: hidden;
+        }
+        #pictures{
+            position: relative;
             height: 100vh;
-            display: none;
-            #smoke{
+            width: 100%;
+            :not(#burger){
+                display: none;
+            }
+            img{
                 position: absolute;
+            }
+            #burger{
+                width: 150%;
+                position: absolute;
+                top: 50%;
                 left: 50%;
-                top: 70%;
-                transform: translate(-50%, -50%);
-                opacity: .5;
-                width: 100%;
-                height: 100vh;
-                animation: 3s linear 1s infinite alternate smoke;
-                z-index: 0;
+                transform: translate(-50%, -50%);   
+                animation: 3s ease-in-out 1s infinite alternate burger;
             }
-            #salt1{
-                position: relative;
-                top: 10%;
-                left: -50%;
-                transform: rotate(270deg);
-                width: 98%;
-                filter: blur(5px);
-                animation: 3s linear 1s infinite alternate salt1;
-            }
-            #salt2{
-                position: absolute;
-                top:0;
-                right: -5%;
-                width: 40%;
-                filter: blur(2px);
-                animation: 3s linear 1s infinite alternate salt2;
-            }
-            @keyframes smoke {
-                from {width: 100%; opacity: .5}
-                to {width: 130%; opacity: .2;}
-            }
-            @keyframes salt1 {
-                from {top: 10%; left: -50%; width: 98%; filter: blur(5px)}
-                to {top: 12%; left: -48%; width: 100%; filter: blur(1px)}
-            }
-            @keyframes salt2 {
-                from {top: 0%; right: -5%; width: 48%; filter: blur(2px)}
-                to {top: -2%; right: -3%; width: 50%; filter: blur(0px)}
+            @keyframes burger {
+                to {scale: 1.05; left:55%}
             }
         }
     }
@@ -119,15 +43,15 @@
         transform: translate(0, -50%);
         h1{
             font-size: $h1;
-            color: $yellow;
-        }
-        p{
-            margin: 1rem 0;
+            color: $orange;
         }
     }
 }
 #second{
     padding: 4rem;
+    margin-top: 100vh;
+    background-color: $black;
+    position: relative;
     img{
         overflow-y: hidden;
     }
@@ -239,7 +163,7 @@
     overflow: unset;
     padding: 14%;
     position: relative;
-    height: 200vh;
+    background-color: $black;
     #third-container{
         position: sticky;
         top: 0;
@@ -275,10 +199,7 @@
         }
     }
 }
-#fourth{
-    //background-color: red;
-    height: 100vh;
-}
+
 
 
 //RESPONSIVE
@@ -286,9 +207,13 @@
     $h1: 3rem !important; 
     #first{
         #right{
-            #picture{
-                width: 30rem;
-                right: 5% !important; 
+            #pictures{
+                #burger{
+                    width: 100%;
+                }
+                @keyframes burger {
+                    to {scale: 1.05;}
+                }
             }
         }
         #left{
@@ -339,92 +264,190 @@
     }
 }
 @media only screen and (min-width: 1000px){
-    $h1: 3.5rem !important; 
+    $h1: 4rem !important; 
     #first{
         #right{
-            #picture{
-                width: 30rem;
-                left: 50%;
-                transform: translate(-50%, -20%);
-
-                #sandwich_top{
-                    top: 0.4rem;
-                    z-index: 8;
-                    animation: 3s linear 1s infinite alternate sandwich_top;
+            #pictures{
+                :not(#burger){
+                    display: block;
                 }
-                #bacon{
-                    top:-2rem;
-                    z-index: 7;
-                    animation: 3s linear 1s infinite alternate bacon;
+                #burger{
+                    width: 49%;
+                    transform: rotate(30deg);
+                    top: 5%;
+                    left: 5%;
+                    animation: none;
+                    z-index: 1;
+                    animation: 3s ease-in-out 1s infinite alternate burger;
                 }
-                #ham{
-                    top: -5rem;
-                    z-index: 6;
-                    animation: 3s linear 1s infinite alternate ham;
+                @keyframes burger {
+                    to {width: 50%; }
                 }
-                #chili{
-                    top:-8rem;
-                    z-index: 5;
-                    animation: 3s linear 1s infinite alternate chili;
-                }
-                #tomato{
-                    top: -18rem;
-                    z-index: 4;
-                    animation: 3s linear 1s infinite alternate tomatoA;
-                }
-                #lectus{
-                    top: -28rem;
-                    z-index: 3;
-                    animation: 3s linear 1s infinite alternate lectus;
-                }
-                #sandwich_bottom{
-                    top: -33rem;
+                #green_onion1{
+                    width: 10%;
+                    transform: rotate(20deg);
+                    top: 10%;
+                    left: 20%;
                     z-index: 2;
-                    animation: 3s linear 1s infinite alternate sandwich_bottom;
+                    animation: 3s ease-in-out 1s infinite alternate greenOnion1;
+
                 }
-                @keyframes sandwich_top {
-                    from {top: .4rem; left: -.3rem}
-                    to {top: -.1rem; left: .6rem}
+                @keyframes greenOnion1{
+                    to { rotate: -5deg; left: 19.5%; filter: blur(1px); width: 10.1%;;}
                 }
-                @keyframes chili {
-                    from {top: -8rem; left: .3rem}
-                    to {top: -7.5rem; left: -.6rem}
+                #green_onion2{
+                    width: 17%;
+                    transform: rotate(60deg);
+                    top: 60%;
+                    left: 25%;
+                    z-index: 13;
+                    filter: blur(1px);
+                    animation: 3s ease-in-out 1s infinite alternate greenOnion2;
                 }
-                @keyframes bacon {
-                    from {top: -2rem}
-                    to {top: -1rem}
+                @keyframes greenOnion2{
+                    to { rotate: 3deg; left: 24%; filter: blur(2px); width: 17.5%;}
                 }
-                @keyframes tomatoA {
-                    from {left: -.7rem}
-                    to {left: .6rem}
+                #red_onion1{
+                    width: 4%;
+                    transform: rotate(-30deg);
+                    top: 40%;
+                    left: 43%;
+                    z-index: 4;
+                    filter: blur(1px);
+                    animation: 3s ease-in-out 1s infinite alternate redOnion1;
                 }
-                @keyframes ham {
-                    from {top: -5rem; left: .3rem}
-                    to {top: -5.5rem; left: -.6rem}
+                @keyframes redOnion1{
+                    to { rotate: 4deg; filter: blur(2px); width: 4.2%; left: 42.5%;}
                 }
-                @keyframes lectus {
-                    from {top: -28rem;}
-                    to {top: -27.5rem;}
+                #red_onion2{
+                    width: 7%;
+                    transform: rotate(-90deg);
+                    top: 25%;
+                    left: 15%;
+                    z-index: 5;
+                    filter: blur(1px);
+                    animation: 3s ease-in-out 1s infinite alternate redOnion2;
                 }
-                @keyframes sandwich_bottom {
-                    from {top: -33rem; left: -.3rem}
-                    to {top: -33.5rem; left: .6rem}
+                @keyframes redOnion2{
+                    to { rotate: 6deg;}
                 }
-            }
-            #blur{
-                display:block;
+                #red_onion3{
+                    width: 9%;
+                    top: 55%;
+                    left: 40%;
+                    z-index: 6;
+                    filter: blur(1px);
+                    animation: 3s ease-in-out 1s infinite alternate redOnion3;
+                }
+                @keyframes redOnion3{
+                    to { rotate: 4deg; filter: blur(3px); width: 9.05%; left: 39%;}
+                }
+                #red_onion4{
+                    width: 15%;
+                    transform: rotate(180deg);
+                    top: 75%;
+                    left: 10%;
+                    z-index: 7;
+                    filter: blur(2px);
+                    animation: 3s ease-in-out 1s infinite alternate redOnion4;
+                }
+                @keyframes redOnion4{
+                    to { rotate: -5deg; filter: blur(5px); width: 15.3%; left: 9.5%;}
+                }
+                #tomato1{
+                    width: 7%;
+                    top: 35%;
+                    left: 45%;
+                    z-index: 8;
+                    filter: blur(2px);
+                    animation: 3s ease-in-out 1s infinite alternate rotateRight;
+                }
+                #tomato2{
+                    width:8%;
+                    top: 35%;
+                    left: 5%;
+                    z-index: 9;
+                    filter: blur(2px);
+                    animation: 3s ease-in-out 1s infinite alternate rotateLeft;
+                }
+                #tomato3{
+                    width: 12%;
+                    top: 55%;
+                    left: 20%;
+                    z-index: 10;
+                    filter: blur(3px);
+                    animation: 3s ease-in-out 1s infinite alternate rotateRight;
+                }
+                #tomato4{
+                    width: 15%;
+                    top: 75%;
+                    left: 40%;
+                    z-index: 11;
+                    filter: blur(2px);
+                    animation: 3s ease-in-out 1s infinite alternate tomato4;
+                }
+                @keyframes tomato4{
+                    to { rotate: 4deg; filter: blur(4px); width: 15.3%; left: 39.5%;}
+                }
+                #salt2{
+                    width: 61%;
+                    left: -5%;
+                    bottom: 0%;
+                    z-index: 0;
+                    animation: 3s ease-in-out 1s infinite alternate salt2;
+                    filter: blur(2px);
+                }
+                @keyframes salt2{
+                    to { filter: blur(3px); width: 60.5%; left: -6%;}
+                }
+                #salt1{
+                    width: 61%;
+                    right: -20%;
+                    top: 0%;
+                    transform: scaleY(-1);
+                    animation: 3s ease-in-out 1s infinite alternate salt1;
+                    filter: blur(2px);
+                }
+                @keyframes salt1{
+                    to { filter: blur(3px); width: 60.5%; right: -19%;}
+                }
+                #smoke{
+                    width: 62%;
+                    left: 20%;
+                    top: -10%;
+                    z-index: 0;
+                    animation: 3s ease-in-out 1s infinite alternate smoke;
+                }
+                @keyframes smoke {
+                    to {width: 59%; top: 0%;}
+                }
+                #salt{
+                    width: 61%;
+                    z-index: 15;
+                    top: 20%;
+                    filter: blur(2px);
+                    animation: 3s ease-in-out 1s infinite alternate salt;
+                }
+                @keyframes salt {
+                    to {width: 60%; filter: blur(3px);}
+                }
+                @keyframes rotateLeft{
+                    to { rotate: -10deg;}
+                }
+                @keyframes rotateRight{
+                    to { rotate: 10deg;}
+                }
             }
         }
         #left{
             width: 30%;
-            margin-left: 2rem;
+            position: absolute;
+            right: 10%;
             h1{
                 font-size: $h1;
                 line-height: 4rem;
             }
-            p{
-                margin: 2rem 0;
-            }
+
         }
     }
     #second{

@@ -1,0 +1,415 @@
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0E0001;
+  color: #FFFFFF;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2.2rem;
+}
+
+p {
+  font-family: "DM Serif Display", serif;
+  overflow: hidden;
+  line-height: 25px;
+  word-spacing: 1px;
+  color: #CACACA;
+}
+
+h3 {
+  color: #E55A32;
+  font-family: "Michroma", sans-serif;
+  font-size: 1rem;
+}
+
+h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+}
+
+input {
+  background: none;
+  border: none;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #CACACA;
+  padding: 0.5rem;
+  color: #E55A32;
+  font-family: "Michroma", sans-serif;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid #E55A32;
+}
+
+#header-mobile {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+#header-mobile #top {
+  width: 100%;
+  height: 4rem;
+  background-color: #0E0001;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#header-mobile #top #after {
+  display: none;
+}
+#header-mobile #top i {
+  position: absolute;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: #EF9834;
+}
+#header-mobile #top i:hover {
+  cursor: pointer;
+}
+#header-mobile #top img {
+  height: 2.5rem;
+}
+#header-mobile #container {
+  display: none;
+}
+#header-mobile #container #bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+#header-mobile #container #bottom a {
+  text-decoration: none;
+  color: #EF9834;
+  padding: 0 0 2rem 0;
+}
+#header-mobile #container #bottom a:hover {
+  text-decoration: underline;
+}
+
+#header-laptop {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  height: 8rem !important;
+  display: flex;
+  display: none;
+}
+#header-laptop #top {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 6rem;
+  justify-content: space-between;
+}
+#header-laptop img {
+  height: 4.5rem;
+}
+#header-laptop #nav {
+  display: flex;
+  justify-content: space-around;
+}
+#header-laptop #nav a {
+  text-decoration: none;
+  color: #EF9834;
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  border: 2px solid #EF9834;
+  color: #CACACA;
+  background: none;
+  cursor: pointer;
+  font-family: "Michroma", sans-serif;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.3);
+  background-color: #EF9834;
+}
+
+@media only screen and (min-width: 850px) {
+  #header-mobile {
+    display: none;
+  }
+  #header-laptop {
+    display: block;
+  }
+}
+#cart-section {
+  position: relative;
+  z-index: 1;
+}
+#cart-section #icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  right: 4%;
+  top: 10%;
+  overflow-y: hidden;
+  transform: scale(1.05);
+  box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.3);
+}
+#cart-section #icon #wrapper {
+  background: #E03C31;
+  position: relative;
+  font-size: 10px;
+  height: 15px;
+  display: flex;
+  padding: 0 0 0 5px;
+  align-items: center;
+}
+#cart-section #icon #wrapper p {
+  color: #0E0001;
+}
+#cart-section #icon #wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 7.5px solid #0E0001;
+  border-left: 7.5px solid #E03C31;
+  width: 0;
+}
+#cart-section #icon #wrapper:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 7.5px solid #0E0001;
+  border-left: 7.5px solid #E03C31;
+  width: 0;
+}
+#cart-section #icon #cart {
+  margin-left: 0.5px;
+  font-size: 15px;
+  color: #E03C31;
+  background-color: #2A2B30;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+#cart-section #icon:hover {
+  cursor: pointer;
+}
+#cart-section #your-order {
+  position: fixed;
+  background-color: #2A2B30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  right: 0;
+  transform: translate(100%);
+}
+#cart-section #your-order h1 {
+  margin-bottom: 10%;
+  width: 80%;
+  text-align: left;
+}
+#cart-section #your-order #middle {
+  width: 80%;
+  height: 50%;
+}
+#cart-section #your-order #middle .eachMiddle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5%;
+}
+#cart-section #your-order #middle .eachMiddle i {
+  overflow-y: hidden;
+}
+#cart-section #your-order #middle .eachMiddle .amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#cart-section #your-order #middle .eachMiddle img {
+  width: 30%;
+}
+#cart-section #your-order #middle .eachMiddle .info {
+  width: 50%;
+}
+#cart-section #your-order hr {
+  width: 80%;
+}
+#cart-section #your-order #bottom {
+  width: 80%;
+}
+#cart-section #your-order #bottom #price {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+}
+#cart-section #your-order #bottom #price h3 {
+  color: #CACACA;
+}
+#cart-section #your-order #bottom #price h2 {
+  font-size: 2.7rem;
+  color: #EF9834;
+}
+#cart-section #your-order #bottom #checkout {
+  margin-top: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#cart-section #your-order #bottom #checkout #back1 {
+  width: 45%;
+}
+#cart-section #your-order #bottom #checkout #check1 {
+  width: 45%;
+  background-color: #EF9834;
+  color: #0E0001;
+}
+#cart-section #checkoutColumn {
+  position: fixed;
+  background-color: #2A2B30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  right: 0;
+  transform: translate(100%);
+}
+#cart-section #checkoutColumn h1 {
+  margin-bottom: 5%;
+  width: 80%;
+  text-align: left;
+}
+#cart-section #checkoutColumn #buyer {
+  width: 80%;
+}
+#cart-section #checkoutColumn #buyer input {
+  width: 100%;
+}
+#cart-section #checkoutColumn #checkout {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+#cart-section #checkoutColumn #checkout #back2 {
+  width: 45%;
+}
+#cart-section #checkoutColumn #checkout #check2 {
+  width: 45%;
+  background-color: #EF9834;
+  color: #0E0001;
+}
+
+#first {
+  width: 100%;
+  padding-top: 5rem;
+}
+#first .section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+#first .section .inSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#first .section .inSection .eachFood {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+#first .section .inSection .eachFood img {
+  width: 80%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#first .section .inSection .eachFood img:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.3);
+}
+#first .section .inSection .eachFood h3 {
+  padding: 1rem 0;
+}
+#first .section .inSection .eachFood #bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#first .section .inSection .eachFood #bottom button {
+  background-color: #EF9834;
+  border-radius: 0;
+  margin-left: 1rem;
+  color: #0E0001;
+  padding: 0.2rem;
+}
+
+@media only screen and (min-width: 500px) {
+  #cart-section #your-order {
+    width: 25rem !important;
+  }
+  #cart-section #checkoutColumn {
+    width: 30rem !important;
+  }
+  #first .section h2 {
+    width: 100%;
+    text-align: left;
+    padding-left: 30%;
+  }
+  #first .section .inSection {
+    flex-flow: row wrap;
+    width: 100%;
+  }
+  #first .section .inSection .eachFood {
+    padding: 0;
+    margin: 5%;
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #first .section h2 {
+    width: 80%;
+    padding: 0;
+  }
+  #first .section .inSection {
+    justify-content: center;
+    width: 80%;
+  }
+  #first .section .inSection .eachFood {
+    width: 25%;
+    margin: 3% 0%;
+  }
+}/*# sourceMappingURL=style.css.map */

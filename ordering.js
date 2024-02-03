@@ -203,7 +203,8 @@ function reloadCard(){
     listCard.innerHTML = '';
     let count = 0;
     let totalPrice = 0;
-    listCards.forEach((value, key)=>{
+    li
+    stCards.forEach((value, key)=>{
         totalPrice = totalPrice + value.price;
         count = count + value.quantity;
         if(value != null){

@@ -1,9 +1,7 @@
 //FONTS
-$playfair: 'Playfair Display', serif;
 $michroma: 'Michroma', sans-serif;
-$roboto: 'Roboto Condensed', sans-serif;
-$sans: 'Josefin Sans', sans-serif;
 $serif: 'DM Serif Display', serif;
+$protest: 'Protest Revolution', sans-serif;
 
 //COLORS:
 $black: #0E0001;
@@ -12,8 +10,9 @@ $orange: #E55A32;
 $red: #E03C31;
 $white: #FFFFFF;
 $gray: #CACACA;
+$dark-gray: #2A2B30;
 
-$h1: 2.2rem;
+$h1: 2.5rem;
 $h2: 2rem;
 $h3: 1rem;
 *{
@@ -26,13 +25,15 @@ body{
     color: $white;
 }
 h1{
-    font-family: $serif;
+    font-family: $protest;
+    font-size: $h1;
 }
 p{
-    font-family: $serif;
+    font-family: $protest;
     overflow: hidden;
     line-height: 25px;
     word-spacing: 1px;
+    color: $gray;
 }
 h3{
     color: $orange;
@@ -40,8 +41,21 @@ h3{
     font-size: $h3;
 }
 h2{
-    font-family: $serif;
+    font-family: $protest;
     font-size: $h2;
+}
+input{
+    background: none;
+    border: none;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $gray;
+    padding: .5rem;
+    color: $orange;
+    font-family: $michroma;
+}
+input:focus{
+    outline: none;
+    border-bottom: 2px solid $orange;
 }
 
 
@@ -124,9 +138,10 @@ button{
     padding: 0.5rem 1rem;
     border-radius: 7px;
     border: 2px solid $yellow;
-    color: white;
+    color: $gray;
     background: none;
     cursor: pointer;
+    font-family: $michroma;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
