@@ -166,6 +166,7 @@ button:hover {
   height: 100vh;
   top: 0;
   left: 0;
+  display: none;
 }
 #first #right #pictures {
   position: relative;
@@ -179,7 +180,7 @@ button:hover {
   position: absolute;
 }
 #first #right #pictures #burger {
-  width: 150%;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -354,6 +355,9 @@ button:hover {
 }
 
 @media only screen and (min-width: 500px) {
+  #first #right #fire {
+    display: block;
+  }
   #first #right #pictures #burger {
     width: 100%;
   }
@@ -405,17 +409,20 @@ button:hover {
     display: block;
   }
   #first #right #pictures #burger {
-    width: 49%;
+    width: 34%;
     transform: rotate(30deg);
-    top: 5%;
-    left: 5%;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
     animation: none;
     z-index: 1;
     animation: 3s ease-in-out 1s infinite alternate burger;
   }
   @keyframes burger {
     to {
-      width: 50%;
+      width: 35.5%;
+      top: 49%;
+      left: 31%;
     }
   }
   #first #right #pictures #green_onion1 {

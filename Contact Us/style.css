@@ -10,12 +10,12 @@ body {
 }
 
 h1 {
-  font-family: "DM Serif Display", serif;
-  font-size: 2.2rem;
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 2.5rem;
 }
 
 p {
-  font-family: "DM Serif Display", serif;
+  font-family: "Protest Revolution", sans-serif;
   overflow: hidden;
   line-height: 25px;
   word-spacing: 1px;
@@ -29,7 +29,7 @@ h3 {
 }
 
 h2 {
-  font-family: "DM Serif Display", serif;
+  font-family: "Protest Revolution", sans-serif;
   font-size: 2rem;
 }
 

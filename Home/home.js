@@ -19,7 +19,7 @@ gsap.to("#green_onion1",{
         scrub: 2,
         duration:1,
     },
-    y: -2000,
+    y: -2500,
     //opacity: 0,
 })
 gsap.to("#green_onion2",{
@@ -49,7 +49,7 @@ gsap.to("#red_onion4",{
         scrub: 2,
         duration:1,
     },
-    y: -2000,
+    y: -2500,
     //opacity: 0,
 })
 gsap.to("#red_onion2",{
@@ -79,7 +79,7 @@ gsap.to("#tomato1",{
         scrub: 2,
         duration:1,
     },
-    y: -2000,
+    y: -2500,
     //opacity: 0,
 })
 gsap.to("#tomato2",{
@@ -109,7 +109,7 @@ gsap.to("#tomato4",{
         scrub: 2,
         duration:1,
     },
-    y: -2000,
+    y: -2500,
     //opacity: 0,
 })
 
