@@ -161,7 +161,7 @@ body{
     
 }
 .carousel .list .item .introduce .topic{
-    font-family: 'Arapey', serif;
+    font-family: 'Protest Revolution', sans-serif;
     font-size: 4em;
     font-weight: 500;
     color: #EF9834;
@@ -169,7 +169,7 @@ body{
 .carousel .list .item .introduce .des{
     font-size: small;
     color: white;
-    font-family: 'Arapey', serif;
+    font-family: 'Protest Revolution', sans-serif;
 }
 .carousel .list .item .introduce .seeMore{
     font-family: 'Michroma', sans-serif;
@@ -307,7 +307,7 @@ body{
 .carousel .list .item .detail{
     opacity: 0;
     pointer-events: none;
-}
+}heck
 /* showDetail */
 .carousel.showDetail .list .item:nth-child(3),
 .carousel.showDetail .list .item:nth-child(4){
@@ -356,16 +356,23 @@ body{
 .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button{
     font-family: 'Michroma', sans-serif;
     background-color: transparent;
-    border: 1px solid #5555;
+    border: 1px solid;
     margin-left: 5px;
     padding: 5px 10px;
     letter-spacing: 2px;
     font-weight: 500;
+    color: white;
 }
 .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button:nth-child(2){
-    background-color: #e03c31;
-    color: #eee;
+    background-color: #EF9834;
+    color: black;
+    border-radius: 20px;
+    border: none;
+  
 }
+
+  
+
 .carousel.showDetail .list .item:nth-child(2) .detail  .title,
 .carousel.showDetail .list .item:nth-child(2) .detail  .des,
 .carousel.showDetail .list .item:nth-child(2) .detail .specifications,
