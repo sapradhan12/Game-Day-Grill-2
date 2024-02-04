@@ -334,161 +334,94 @@ initApp(drinks_products, drinks, 3);
 let foodItems = [appetizers_products, entrees_products, sides_products, drinks_products];
 
 //ADD TO CART
+let middle = document.querySelector('#middle');
 
 function addToCart(arrayNum, key) {
     // Implement your logic to add the selected item to the cart
     console.log(foodItems[arrayNum][key]);
-
-
-    /*
     
     // Create cart item element
     const cartItem = document.createElement('div');
-    cartItem.classList.add('cart-item');
+    cartItem.classList.add('eachMiddle');
     cartItem.innerHTML = `
-      <span class="item-name-in-cart">${item}</span>
-      <div class="quantity-container">
-        <button onclick="updateQuantity(this, -1)">-</button>
-        <span class="quantity">1</span>
-        <button onclick="updateQuantity(this, 1)">+</button>
-      </div>
-      <span class="price">$10.00</span>
-      <button onclick="removeFromCart(this)">Remove</button>
+        <div class="amount">
+            <i onclick="updateQuantity(this, +1, ${arrayNum}, ${key})" class="fa-solid fa-sort-up"></i>
+            <p class="num">1</p>
+            <i onclick="updateQuantity(this, -1, ${arrayNum}, ${key})" class="fa-solid fa-caret-down"></i>
+        </div>
+        <img src="${foodItems[arrayNum][key].image}" alt="">
+        <div class="info">
+            <h3>${foodItems[arrayNum][key].name}</h3>
+            <p class="price">${foodItems[arrayNum][key].price.toLocaleString()}</p>
+        </div>
+        <i onclick="removeFromCart(this)" class="fa-solid fa-xmark"></i> 
     `;
-    
+
+
     // Append cart item to the cart
-    document.getElementById('cartItems').appendChild(cartItem);
+    middle.appendChild(cartItem);
     
     // Update total cost
     updateTotalCost();
-    */
-    }
+}
     
-    
-    function removeFromCart(button) {
+function removeFromCart(button) {
     // Implement your logic to remove the selected item from the cart
     const cartItem = button.parentNode;
     cartItem.parentNode.removeChild(cartItem);
-    
+
     // Update total cost
     updateTotalCost();
-    }
+}
+
     
-    function updateQuantity(button, change) {
+function updateQuantity(button, change, arrayNum, key) {
     const quantityContainer = button.parentNode;
-    const quantityElement = quantityContainer.querySelector('.quantity');
+    const quantityElement = quantityContainer.querySelector('.num');
     let quantity = parseInt(quantityElement.innerText);
-    
+
     // Update quantity
     quantity += change;
-    
+
     // Remove item if quantity becomes 0
     if (quantity === 0) {
-      const cartItem = quantityContainer.parentNode;
-      cartItem.parentNode.removeChild(cartItem);
+        const cartItem = quantityContainer.parentNode;
+        cartItem.parentNode.removeChild(cartItem);
     } else {
-      quantityElement.innerText = quantity;
+        quantityElement.innerText = quantity;
     }
-    
+
     // Update inline price and total cost
-    updatePrices();
+    updatePrices(arrayNum, key);
     updateTotalCost();
-    }
+}
+
+function updatePrices(arrayNum, key) {
+    const cartItems = document.querySelectorAll('.eachMiddle');
     
-    function updatePrices() {
-    const cartItems = document.querySelectorAll('.cart-item');
     cartItems.forEach(item => {
-      const quantity = parseInt(item.querySelector('.quantity').innerText);
-      const priceElement = item.querySelector('.price');
-      const price = 10 * quantity; // Assuming each item costs $10
-      priceElement.innerText = `$${price.toFixed(2)}`;
+        const quantity = parseInt(item.querySelector('.num').innerText);
+
+        const getPrice = parseFloat(foodItems[arrayNum][key].price.replace('$', ''));
+        const setPrice = item.querySelector('.price');
+                
+        const price = getPrice * quantity; 
+        
+        setPrice.innerHTML = `$${price}`;
     });
-    }
-    
-    function updateTotalCost() {
-    const cartItems = document.querySelectorAll('.cart-item');
+}
+
+
+
+function updateTotalCost() {
+    const cartItems = document.querySelectorAll('.eachMiddle');
     let totalCost = 0;
-    
+
     cartItems.forEach(item => {
-      const quantity = parseInt(item.querySelector('.quantity').innerText);
-      totalCost += 10 * quantity; // Assuming each item costs $10
+        const elementCost = parseFloat(item.querySelector('.price').innerText.replace('$', ''));
+        totalCost += elementCost; // Assuming each item costs $10
     });
-    
-    document.getElementById('totalCost').innerText = `Total Cost: $${totalCost.toFixed(2)}`;
-    }
-    
-    function checkout() {
-        window.location.href = "checkout.html";
-    }
 
-
-/*
-
-
-//ADD TO CARD
-let foodItems = [appetizers_products, entrees_products, sides_products, drinks_products];
-let middle = document.querySelector('#middle'); //listCard
-let quantity = document.querySelector('.num');
-let total = document.querySelector('.total');
-let count = 0;
-
-
-let cartList = [];
-
-function addToCart(key, arrayNum){
-    cartList.push({array: arrayNum, keyNum: key})
-    reloadCart(key, arrayNum);
+    document.querySelector('.total').innerText = `$${totalCost.toFixed(2)}`;
 }
-console.log(cartList[0])
-
-function reloadCart(key, arrayNum){
-    let newDiv = document.createElement("div");
-    newDiv.classList.add('eachMiddle');
-    cartList.push({array: arrayNum, keyNum: key})
-    //count += foodItems[arrayNum][key].quantity;
-
-    if(cartList != null){
-        for(let i = 0; i < cartList.length; i++){
-            if(cartList[i].array == arrayNum && cartList[i].keyNum == key){
-                delete cartList[i];
-            }
-            newDiv.innerHTML =  `
-            <div class="amount">
-                <i onclick="changeQuantity(${cartList[i].keyNum}, ${cartList[i].array}, ${foodItems[cartList[i].array][cartList[i].keyNum].quantity + 1})" class="fa-solid fa-sort-up"></i>
-                <p class="num">${foodItems[cartList[i].array][keyNum].quantity}</p>
-                <i onclick="changeQuantity(${cartList[i].keyNum}, ${cartList[i].array}, ${foodItems[arrayNum][cartList[i].keyNum].quantity - 1})" class="fa-solid fa-caret-down"></i>
-            </div>
-            <img src="${foodItems[arrayNum][key].image}" alt="">
-            <div class="info">
-                <h3>${foodItems[arrayNum][key].name}</h3>
-                <p>${foodItems[arrayNum][key].price.toLocaleString()}</p>
-            </div>
-            <i class="fa-solid fa-xmark"></i> 
-        `;
-        middle.appendChild(newDiv);
-            }
-    }
-
-}
-
-function changeQuantity(key, arrayNum, quantity){
-    if(quantity == 0){
-        delete middle[key];
-    }else{
-        foodItems[arrayNum][key].quantity = quantity;
-        foodItems[arrayNum][key].totalPrice = quantity * foodItems[arrayNum][key].price;
-    }
-    reloadCart(key, arrayNum);
-}
-*/
-
-    
-
-
-
-
-
-
-
-
 
