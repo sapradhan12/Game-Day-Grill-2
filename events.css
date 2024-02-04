@@ -319,8 +319,9 @@ a{
 
 @media screen and (max-width: 600px){
     .landingpage .content .heading{
-        margin-left: 600px;
-    }
+        margin-right: 30px;
+      
+
     
     
 }

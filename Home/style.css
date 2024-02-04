@@ -159,7 +159,7 @@ button:hover {
   background-color: #EF9834;
 }
 
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: 850px) {i
   #header-mobile {
     display: none;
   }
@@ -455,6 +455,8 @@ button:hover {
     z-index: 1;
     animation: 3s ease-in-out 1s infinite alternate burger;
   }
+
+  
   @keyframes burger {
     to {
       width: 35.5%;
@@ -673,6 +675,12 @@ button:hover {
   #first #left h1 {
     font-size: 4rem !important;
     line-height: 4rem;
+    color: black;
+  }
+  @media only screen and (max-width: 400px){
+    #first #left h1{
+      color: black;
+    }
   }
   #second {
     padding: 4rem 20%;
