@@ -306,11 +306,11 @@ const sides = document.querySelector('#sides');
 const drinks = document.querySelector('#drinks');
 
 
-let listCards = [];
 
 function initApp(listName, forWhat, arrayNum){
     listName.forEach((value, key) => {
         let newDiv = document.createElement("div");
+        value.totalPrice = value.price;
         value.quantity = 1;
         newDiv.classList.add('eachFood');
         newDiv.innerHTML = `
@@ -332,7 +332,6 @@ initApp(entrees_products, entrees, 1);
 initApp(sides_products, sides, 2);
 initApp(drinks_products, drinks, 3);
 
-console.log(listCards)
 
 
 //ADD TO CARD
@@ -341,7 +340,6 @@ let middle = document.querySelector('#middle'); //listCard
 let quantity = document.querySelector('.num');
 let total = document.querySelector('.total');
 let count = 0;
-let totalPrice = 0;
 
 console.log(foodItems[2][7].quantity);
 
@@ -353,14 +351,13 @@ function reloadCart(key, arrayNum){
     let newDiv = document.createElement("div");
     newDiv.classList.add('eachMiddle');
 
-    totalPrice += foodItems[arrayNum][key].price;
     count += foodItems[arrayNum][key].quantity;
 
     newDiv.innerHTML =  `
         <div class="amount">
-            <i onclick="changeQuantity(${key}, ${arrayNum}, ${foodItems[arrayNum][key].quantity - 1})" class="fa-solid fa-sort-up"></i>
+            <i onclick="changeQuantity(${key}, ${arrayNum}, ${foodItems[arrayNum][key].quantity + 1})" class="fa-solid fa-sort-up"></i>
             <p class="num">${foodItems[arrayNum][key].quantity}</p>
-            <i onclick="changeQuantity(${key}, ${arrayNum}, ${foodItems[arrayNum][key].quantity + 1})" class="fa-solid fa-caret-down"></i>
+            <i onclick="changeQuantity(${key}, ${arrayNum}, ${foodItems[arrayNum][key].quantity - 1})" class="fa-solid fa-caret-down"></i>
         </div>
         <img src="${foodItems[arrayNum][key].image}" alt="">
         <div class="info">
@@ -378,9 +375,9 @@ function changeQuantity(key, arrayNum, quantity){
         delete middle[key];
     }else{
         foodItems[arrayNum][key].quantity = quantity;
-        foodItems[arrayNum][key].price = quantity * products[key].price;
+        foodItems[arrayNum][key].totalPrice = quantity * foodItems[arrayNum][key].price;
     }
-    reloadCard(key, arrayNum);
+    reloadCart(key, arrayNum);
 }
 
 
