@@ -3,6 +3,9 @@
   margin: 0;
   overflow-x: hidden;
 }
+* :not(body) {
+  overflow-y: hidden;
+}
 
 body {
   background-color: #0E0001;
@@ -46,6 +49,10 @@ input {
 input:focus {
   outline: none;
   border-bottom: 2px solid #E55A32;
+}
+
+img {
+  overflow: hidden;
 }
 
 #header-mobile {
