@@ -312,6 +312,17 @@ a{
     }
 }
 
+@media screen and (max-width: 600px){
+    .landingpage .content .heading{
+        margin-left: 600px;
+    }
+    .landingpage .content .image img{
+        margin-top: 600px;
+       
+    }
+    
+}
+
 @media screen and (max-width: 390px){
     #text{
         font-size: 2.5em;
