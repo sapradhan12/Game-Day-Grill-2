@@ -97,49 +97,49 @@ let appetizers_products = [
     {
         id: 1,
         name: "Loaded Nachos",
-        image: "../Picture/Home/Dishes/salmon.png",
+        image: "../Picture/Ordering/Appetizers/Download -  Loaded Nachos.png",
         price: "$9.49"
     },
     {
         id: 2,
-        name: "Mozzarellea Sticks",
-        image: "mozzarellasticks.png",
+        name: "Creamy Pumpkin Soup",
+        image: "../Picture/Ordering/Appetizers/Download -  Creamy Pumpkin Soup.png",
         price: "$10.49"
     },
     {
         id: 3,
-        name: "Fried Pickles",
-        image: "friedpickles.png",
+        name: "Potato Salad",
+        image: "../Picture/Ordering/Appetizers/Download -  Potato Salad.png",
         price: "$10.49"
     },
     {
         id: 4,
-        name: "Spinach and Artichoke Dip",
-        image: "spinachdip.png",
+        name: "Breast Chicken",
+        image: "../Picture/Ordering/Appetizers/Download - Breast Chicken.png",
         price: "$6.49"
     },
     {
         id: 5,
-        name: "Jalapeno Poppers",
-        image: "jalapenopoppers.png",
+        name: "Chicken Kebabs",
+        image: "../Picture/Ordering/Appetizers/Download - Chicken Kebab.png",
         price: "7.49"
     },
     {
         id: 6,
-        name: "Quesadilla",
-        image: "quesadilla.png",
+        name: "Mac & Cheese",
+        image: "../Picture/Ordering/Appetizers/Download - Mac & Cheese.png",
         price: "$7.49"
     },
     {
         id: 7,
-        name: "Buffalo Cauliflower Bites",
-        image: "buffalobites.png",
+        name: "Seasoned Salmon",
+        image: "../Picture/Ordering/Appetizers/Download - Salmon.png",
         price: "$6.49"
     },
     {
         id: 8,
-        name: "Garlic Parmesan Fries",
-        image: "garlicparmesanfries.png",
+        name: "Tomato Soup",
+        image: "../Picture/Ordering/Appetizers/Download - Tomato Soup.png",
         price: "$4.49"
     }
 ]
@@ -148,50 +148,50 @@ let appetizers_products = [
 let entrees_products = [
     {
         id: 1,
-        name: "Loaded Nachos",
-        image: "../Picture/Home/Dishes/salmon.png",
+        name: "Chicken & Veggies",
+        image: "../Picture/Ordering/Entrees/Download - Chicken & Veggies.png",
         price: "$9.49"
     },
     {
         id: 2,
-        name: "Mozzarellea Sticks",
-        image: "mozzarellasticks.png",
+        name: "Egg Salad",
+        image: "../Picture/Ordering/Entrees/Download - Egg Salad.png",
         price: "$10.49"
     },
     {
         id: 3,
-        name: "Fried Pickles",
-        image: "friedpickles.png",
+        name: "Full English Meal",
+        image: "../Picture/Ordering/Entrees/Download - Full English Meal.png",
         price: "$10.49"
     },
     {
         id: 4,
-        name: "Spinach and Artichoke Dip",
-        image: "spinachdip.png",
+        name: "Hotpot",
+        image: "../Picture/Ordering/Entrees/Download - Hotpot.png",
         price: "$6.49"
     },
     {
         id: 5,
-        name: "Jalapeno Poppers",
-        image: "jalapenopoppers.png",
+        name: "Meatball Spaghetti",
+        image: "../Picture/Ordering/Entrees/Download - Meatball Spaghetti.png",
         price: "7.49"
     },
     {
         id: 6,
-        name: "Quesadilla",
-        image: "quesadilla.png",
+        name: "Salad",
+        image: "../Picture/Ordering/Entrees/Download - Salad.png",
         price: "$7.49"
     },
     {
         id: 7,
-        name: "Buffalo Cauliflower Bites",
-        image: "buffalobites.png",
+        name: "Steak Salad",
+        image: "../Picture/Ordering/Entrees/Download - Steak Salad.png",
         price: "$6.49"
     },
     {
         id: 8,
-        name: "Garlic Parmesan Fries",
-        image: "garlicparmesanfries.png",
+        name: "Zesty Chicken",
+        image: "../Picture/Ordering/Entrees/Download - Zesty Chicken.png",
         price: "$4.49"
     }
 ]
@@ -200,50 +200,50 @@ let entrees_products = [
 let sides_products = [
     {
         id: 1,
-        name: "Loaded Nachos",
-        image: "../Picture/Home/Dishes/salmon.png",
+        name: "Baguettes",
+        image: "../Picture/Ordering/Sides/Download - Baguette.png",
         price: "$9.49"
     },
     {
         id: 2,
-        name: "Mozzarellea Sticks",
-        image: "mozzarellasticks.png",
+        name: "Bread Bites",
+        image: "../Picture/Ordering/Sides/Download - Bread Bites.png",
         price: "$10.49"
     },
     {
         id: 3,
-        name: "Fried Pickles",
-        image: "friedpickles.png",
+        name: "Cheesecake",
+        image: "../Picture/Ordering/Sides/Download - Cheesecake.png",
         price: "$10.49"
     },
     {
         id: 4,
-        name: "Spinach and Artichoke Dip",
-        image: "spinachdip.png",
+        name: "Chips",
+        image: "../Picture/Ordering/Sides/Download - Chips.png",
         price: "$6.49"
     },
     {
         id: 5,
         name: "Jalapeno Poppers",
-        image: "jalapenopoppers.png",
+        image: "../Picture/Ordering/Sides/Download - Jalapeno Poppers.png",
         price: "7.49"
     },
     {
         id: 6,
-        name: "Quesadilla",
-        image: "quesadilla.png",
+        name: "Ice Cream",
+        image: "../Picture/Ordering/Sides/Download - Ice Cream.png",
         price: "$7.49"
     },
     {
         id: 7,
-        name: "Buffalo Cauliflower Bites",
-        image: "buffalobites.png",
+        name: "Onion Rings",
+        image: "../Picture/Ordering/Sides/Download - Onion Rings.png",
         price: "$6.49"
     },
     {
         id: 8,
-        name: "Garlic Parmesan Fries",
-        image: "garlicparmesanfries.png",
+        name: "Oven-smoked Chicken",
+        image: "../Picture/Ordering/Sides/Download - Oven-smoked Chicken.png",
         price: "$4.49"
     }
 ]
@@ -252,50 +252,50 @@ let sides_products = [
 let drinks_products = [
     {
         id: 1,
-        name: "Loaded Nachos",
-        image: "../Picture/Home/Dishes/salmon.png",
+        name: "Bubble Tea",
+        image: "../Picture/Ordering/Beverages/Download - Bubble Tea.png",
         price: "$9.49"
     },
     {
         id: 2,
-        name: "Mozzarellea Sticks",
-        image: "mozzarellasticks.png",
+        name: "Chocolate Drink",
+        image: "../Picture/Ordering/Beverages/Download - Chocolate Drink.png",
         price: "$10.49"
     },
     {
         id: 3,
-        name: "Fried Pickles",
-        image: "friedpickles.png",
+        name: "Fruit Juice",
+        image: "../Picture/Ordering/Beverages/Download - Fruit Juice.png",
         price: "$10.49"
     },
     {
         id: 4,
-        name: "Spinach and Artichoke Dip",
-        image: "spinachdip.png",
+        name: "Iced Tea",
+        image: "../Picture/Ordering/Beverages/Download - Iced Tea.png",
         price: "$6.49"
     },
     {
         id: 5,
-        name: "Jalapeno Poppers",
-        image: "jalapenopoppers.png",
+        name: "Pink Lemonade",
+        image: "../Picture/Ordering/Beverages/Download - Pink Lemonade.png",
         price: "7.49"
     },
     {
         id: 6,
-        name: "Quesadilla",
-        image: "quesadilla.png",
+        name: "Smoothie",
+        image: "../Picture/Ordering/Beverages/Download - Smoothie.png",
         price: "$7.49"
     },
     {
         id: 7,
-        name: "Buffalo Cauliflower Bites",
-        image: "buffalobites.png",
+        name: "Sprite",
+        image: "../Picture/Ordering/Beverages/Download - Sprite.png",
         price: "$6.49"
     },
     {
         id: 8,
-        name: "Garlic Parmesan Fries",
-        image: "garlicparmesanfries.png",
+        name: "Water",
+        image: "../Picture/Ordering/Beverages/Download - Water.png",
         price: "$4.49"
     }
 ]
