@@ -306,9 +306,12 @@ const sides = document.querySelector('#sides');
 const drinks = document.querySelector('#drinks');
 
 
+let listCards = [];
+
 function initApp(listName, forWhat, arrayNum){
     listName.forEach((value, key) => {
         let newDiv = document.createElement("div");
+        value.quantity = 1;
         newDiv.classList.add('eachFood');
         newDiv.innerHTML = `
             <img src="${value.image}" alt="">
@@ -329,7 +332,7 @@ initApp(entrees_products, entrees, 1);
 initApp(sides_products, sides, 2);
 initApp(drinks_products, drinks, 3);
 
-
+console.log(listCards)
 
 
 //ADD TO CARD
@@ -337,26 +340,27 @@ let foodItems = [appetizers_products, entrees_products, sides_products, drinks_p
 let middle = document.querySelector('#middle'); //listCard
 let quantity = document.querySelector('.num');
 let total = document.querySelector('.total');
+let count = 0;
+let totalPrice = 0;
 
-
+console.log(foodItems[2][7].quantity);
 
 function addToCart(key, arrayNum){
-    if(foodItems[arrayNum][key] == null){
-        // copy product from list to list card
-        foodItems[arrayNum][key] = JSON.parse(JSON.stringify(products[key]));
-        foodItems[arrayNum][key].quantity = 1;
-    }
-    reloadCart();
+    reloadCart(key, arrayNum);
 }
+
 function reloadCart(key, arrayNum){
-    middle.innerHTML = '';
     let newDiv = document.createElement("div");
     newDiv.classList.add('eachMiddle');
-    newDiv.innerHTML = `
+
+    totalPrice += foodItems[arrayNum][key].price;
+    count += foodItems[arrayNum][key].quantity;
+
+    newDiv.innerHTML =  `
         <div class="amount">
-            <i onclick="changeQuantity(${key}, ${foodItems[arrayNum][key].quantity - 1})" class="fa-solid fa-sort-up"></i>
+            <i onclick="changeQuantity(${key}, ${arrayNum}, ${foodItems[arrayNum][key].quantity - 1})" class="fa-solid fa-sort-up"></i>
             <p class="num">${foodItems[arrayNum][key].quantity}</p>
-            <i onclick="changeQuantity(${key}, ${foodItems[arrayNum][key].quantity + 1})" class="fa-solid fa-caret-down"></i>
+            <i onclick="changeQuantity(${key}, ${arrayNum}, ${foodItems[arrayNum][key].quantity + 1})" class="fa-solid fa-caret-down"></i>
         </div>
         <img src="${foodItems[arrayNum][key].image}" alt="">
         <div class="info">
@@ -365,18 +369,20 @@ function reloadCart(key, arrayNum){
         </div>
         <i class="fa-solid fa-xmark"></i> 
     `;
-    middle.appendChild(newDiv)
+    middle.appendChild(newDiv);
+    total.innerText = "$ " + count.toLocaleString();
 }
 
-function changeQuantity(key, quantity){
+function changeQuantity(key, arrayNum, quantity){
     if(quantity == 0){
         delete middle[key];
     }else{
-        listCards[key].quantity = quantity;
-        listCards[key].price = quantity * products[key].price;
+        foodItems[arrayNum][key].quantity = quantity;
+        foodItems[arrayNum][key].price = quantity * products[key].price;
     }
-    reloadCard();
+    reloadCard(key, arrayNum);
 }
+
 
 
     

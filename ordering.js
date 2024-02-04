@@ -121,7 +121,7 @@ let appetizers_list = document.querySelector(".appetizers-list");
 let listCard = document.querySelector(".listCard");
 let body = document.querySelector('body');
 let total = document.querySelector('.total');
-let quantity = document.querySelector('.quantity');
+let quantity = document.querySelector('.quantity')
 
 
 let appetizers_products = [
@@ -203,8 +203,7 @@ function reloadCard(){
     listCard.innerHTML = '';
     let count = 0;
     let totalPrice = 0;
-    li
-    stCards.forEach((value, key)=>{
+    listCards.forEach((value, key)=>{
         totalPrice = totalPrice + value.price;
         count = count + value.quantity;
         if(value != null){
