@@ -1,3 +1,10 @@
+function alertSimple(){
+  window.alert("Thank you!");
+}
+
+
+
+
 function dropDown(){
     document.getElementById("before").style.display = "none";
     document.getElementById("after").style.display = "block";
