@@ -212,7 +212,12 @@ button:hover {
 }
 #first #left h1 {
   font-size: 2.5rem;
-  color: #E55A32;
+  color: #EF9834;
+}
+
+#first #left p{
+  font-size: 1.5rem;
+  color: white;
 }
 
 #second {
