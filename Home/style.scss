@@ -585,3 +585,14 @@
 }
 
 
+//NAV ERROR
+@media only screen and (min-width: 850px){
+    #header-mobile{
+        display:none;
+    }
+    #header-laptop{
+        display: block;
+    }
+}
+
+

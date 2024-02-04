@@ -759,4 +759,12 @@ button:hover {
     text-align: left;
     align-items: start;
   }
+}
+@media only screen and (min-width: 850px) {
+  #header-mobile {
+    display: none;
+  }
+  #header-laptop {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
