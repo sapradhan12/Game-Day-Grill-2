@@ -59,6 +59,8 @@ img {
   width: 100%;
   position: fixed;
   z-index: 1;
+  font-family: "Michroma", sans-serif;
+  z-index: 100000000;
 }
 #header-mobile #top {
   width: 100%;
@@ -106,6 +108,8 @@ img {
   z-index: 1;
   height: 8rem !important;
   display: flex;
+  font-family: "Michroma", sans-serif;
+  z-index: 100000000;
   display: none;
 }
 #header-laptop #top {
