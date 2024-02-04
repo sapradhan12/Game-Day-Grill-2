@@ -9,7 +9,7 @@
         align-items: center;
         position: fixed;
         right: 4%;
-        top: 10%;
+        top: 20%;
         overflow-y: hidden;
         transform: scale(1.05);
         box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.3);
@@ -78,7 +78,10 @@
                 padding-bottom: 5%;
                 i{
                     overflow-y: hidden;
+                    cursor: pointer;
+                    
                 }
+                
 
                 .amount{
                     display: flex;
@@ -170,7 +173,7 @@
 }
 #first{
     width: 100%;
-    padding-top: 5rem;
+    padding-top: 10%;
     .section{
         display: flex;
         flex-direction: column;
