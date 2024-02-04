@@ -306,7 +306,6 @@ const sides = document.querySelector('#sides');
 const drinks = document.querySelector('#drinks');
 
 
-
 function initApp(listName, forWhat, arrayNum){
     listName.forEach((value, key) => {
         let newDiv = document.createElement("div");
@@ -318,7 +317,7 @@ function initApp(listName, forWhat, arrayNum){
             <h3>${value.name}</h3>
             <div id="bottom">
                 <p>${value.price.toLocaleString()}</p>
-                <button onclick="addToCart(${key}, ${arrayNum})">
+                <button onclick="addToCart(${arrayNum}, ${key})">
                     <i class="fa-solid fa-plus"></i>
                     Add to cart
                 </button>
@@ -332,6 +331,98 @@ initApp(entrees_products, entrees, 1);
 initApp(sides_products, sides, 2);
 initApp(drinks_products, drinks, 3);
 
+let foodItems = [appetizers_products, entrees_products, sides_products, drinks_products];
+
+//ADD TO CART
+
+function addToCart(arrayNum, key) {
+    // Implement your logic to add the selected item to the cart
+    console.log(foodItems[arrayNum][key]);
+
+
+    /*
+    
+    // Create cart item element
+    const cartItem = document.createElement('div');
+    cartItem.classList.add('cart-item');
+    cartItem.innerHTML = `
+      <span class="item-name-in-cart">${item}</span>
+      <div class="quantity-container">
+        <button onclick="updateQuantity(this, -1)">-</button>
+        <span class="quantity">1</span>
+        <button onclick="updateQuantity(this, 1)">+</button>
+      </div>
+      <span class="price">$10.00</span>
+      <button onclick="removeFromCart(this)">Remove</button>
+    `;
+    
+    // Append cart item to the cart
+    document.getElementById('cartItems').appendChild(cartItem);
+    
+    // Update total cost
+    updateTotalCost();
+    */
+    }
+    
+    
+    function removeFromCart(button) {
+    // Implement your logic to remove the selected item from the cart
+    const cartItem = button.parentNode;
+    cartItem.parentNode.removeChild(cartItem);
+    
+    // Update total cost
+    updateTotalCost();
+    }
+    
+    function updateQuantity(button, change) {
+    const quantityContainer = button.parentNode;
+    const quantityElement = quantityContainer.querySelector('.quantity');
+    let quantity = parseInt(quantityElement.innerText);
+    
+    // Update quantity
+    quantity += change;
+    
+    // Remove item if quantity becomes 0
+    if (quantity === 0) {
+      const cartItem = quantityContainer.parentNode;
+      cartItem.parentNode.removeChild(cartItem);
+    } else {
+      quantityElement.innerText = quantity;
+    }
+    
+    // Update inline price and total cost
+    updatePrices();
+    updateTotalCost();
+    }
+    
+    function updatePrices() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    cartItems.forEach(item => {
+      const quantity = parseInt(item.querySelector('.quantity').innerText);
+      const priceElement = item.querySelector('.price');
+      const price = 10 * quantity; // Assuming each item costs $10
+      priceElement.innerText = `$${price.toFixed(2)}`;
+    });
+    }
+    
+    function updateTotalCost() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    let totalCost = 0;
+    
+    cartItems.forEach(item => {
+      const quantity = parseInt(item.querySelector('.quantity').innerText);
+      totalCost += 10 * quantity; // Assuming each item costs $10
+    });
+    
+    document.getElementById('totalCost').innerText = `Total Cost: $${totalCost.toFixed(2)}`;
+    }
+    
+    function checkout() {
+        window.location.href = "checkout.html";
+    }
+
+
+/*
 
 
 //ADD TO CARD
@@ -341,33 +432,43 @@ let quantity = document.querySelector('.num');
 let total = document.querySelector('.total');
 let count = 0;
 
-console.log(foodItems[2][7].quantity);
+
+let cartList = [];
 
 function addToCart(key, arrayNum){
+    cartList.push({array: arrayNum, keyNum: key})
     reloadCart(key, arrayNum);
 }
+console.log(cartList[0])
 
 function reloadCart(key, arrayNum){
     let newDiv = document.createElement("div");
     newDiv.classList.add('eachMiddle');
+    cartList.push({array: arrayNum, keyNum: key})
+    //count += foodItems[arrayNum][key].quantity;
 
-    count += foodItems[arrayNum][key].quantity;
+    if(cartList != null){
+        for(let i = 0; i < cartList.length; i++){
+            if(cartList[i].array == arrayNum && cartList[i].keyNum == key){
+                delete cartList[i];
+            }
+            newDiv.innerHTML =  `
+            <div class="amount">
+                <i onclick="changeQuantity(${cartList[i].keyNum}, ${cartList[i].array}, ${foodItems[cartList[i].array][cartList[i].keyNum].quantity + 1})" class="fa-solid fa-sort-up"></i>
+                <p class="num">${foodItems[cartList[i].array][keyNum].quantity}</p>
+                <i onclick="changeQuantity(${cartList[i].keyNum}, ${cartList[i].array}, ${foodItems[arrayNum][cartList[i].keyNum].quantity - 1})" class="fa-solid fa-caret-down"></i>
+            </div>
+            <img src="${foodItems[arrayNum][key].image}" alt="">
+            <div class="info">
+                <h3>${foodItems[arrayNum][key].name}</h3>
+                <p>${foodItems[arrayNum][key].price.toLocaleString()}</p>
+            </div>
+            <i class="fa-solid fa-xmark"></i> 
+        `;
+        middle.appendChild(newDiv);
+            }
+    }
 
-    newDiv.innerHTML =  `
-        <div class="amount">
-            <i onclick="changeQuantity(${key}, ${arrayNum}, ${foodItems[arrayNum][key].quantity + 1})" class="fa-solid fa-sort-up"></i>
-            <p class="num">${foodItems[arrayNum][key].quantity}</p>
-            <i onclick="changeQuantity(${key}, ${arrayNum}, ${foodItems[arrayNum][key].quantity - 1})" class="fa-solid fa-caret-down"></i>
-        </div>
-        <img src="${foodItems[arrayNum][key].image}" alt="">
-        <div class="info">
-            <h3>${foodItems[arrayNum][key].name}</h3>
-            <p>${foodItems[arrayNum][key].price.toLocaleString()}</p>
-        </div>
-        <i class="fa-solid fa-xmark"></i> 
-    `;
-    middle.appendChild(newDiv);
-    total.innerText = "$ " + count.toLocaleString();
 }
 
 function changeQuantity(key, arrayNum, quantity){
@@ -379,8 +480,7 @@ function changeQuantity(key, arrayNum, quantity){
     }
     reloadCart(key, arrayNum);
 }
-
-
+*/
 
     
 
