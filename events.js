@@ -79,3 +79,31 @@ const showSlider = (type) => {
         nextBtn.click();
     }, 5000);
 }
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+//NAV BAR
+gsap.to("#header-laptop",{
+    scrollTrigger:{
+        trigger: "body",
+        start: "top top",
+        scrub: 2,
+        duration:1,
+    },
+    backgroundColor: "#0E0001",
+    //opacity: 0,
+})
+
+
+
+function dropDown(){
+    document.getElementById("before").style.display = "none";
+    document.getElementById("after").style.display = "block";
+    document.getElementById("container").style.display = "block";
+}
+function goUp(){
+    document.getElementById("before").style.display = "block";
+    document.getElementById("after").style.display = "none";
+    document.getElementById("container").style.display = "none";
+}

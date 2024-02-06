@@ -17,6 +17,8 @@ function goUp(){
 }
 
 
+
+
 //LENIS SMOOTH SCROLLING
 
 const lenis = new Lenis()
@@ -32,3 +34,19 @@ gsap.ticker.add((time)=>{
 })
 
 gsap.ticker.lagSmoothing(0)
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+//NAV BAR
+gsap.to("#header-laptop",{
+    scrollTrigger:{
+        trigger: "body",
+        start: "top top",
+        scrub: 2,
+        duration:1,
+    },
+    backgroundColor: "#0E0001",
+    //opacity: 0,
+})

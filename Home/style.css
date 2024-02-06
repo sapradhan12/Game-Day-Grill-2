@@ -86,6 +86,7 @@ img {
   height: 2.5rem;
 }
 #header-mobile #container {
+  background-color: #0E0001;
   display: none;
 }
 #header-mobile #container #bottom {
@@ -97,9 +98,15 @@ img {
   text-decoration: none;
   color: #EF9834;
   padding: 0 0 2rem 0;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
 }
 #header-mobile #container #bottom a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline #EF9834;
+          text-decoration: underline #EF9834;
 }
 
 #header-laptop {
@@ -130,8 +137,16 @@ img {
 #header-laptop #nav a {
   text-decoration: none;
   color: #EF9834;
-  padding-left: 1rem;
   margin-left: 1rem;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+#header-laptop #nav a:hover {
+  -webkit-text-decoration: underline #EF9834;
+          text-decoration: underline #EF9834;
 }
 
 button {

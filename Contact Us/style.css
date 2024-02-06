@@ -4,7 +4,7 @@
   overflow-x: hidden;
 }
 * :not(body) {
-  /*  overflow-y: hidden; */
+  overflow-y: hidden;
 }
 
 body {
@@ -86,6 +86,7 @@ img {
   height: 2.5rem;
 }
 #header-mobile #container {
+  background-color: #0E0001;
   display: none;
 }
 #header-mobile #container #bottom {
@@ -97,9 +98,15 @@ img {
   text-decoration: none;
   color: #EF9834;
   padding: 0 0 2rem 0;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
 }
 #header-mobile #container #bottom a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline #EF9834;
+          text-decoration: underline #EF9834;
 }
 
 #header-laptop {
@@ -130,8 +137,16 @@ img {
 #header-laptop #nav a {
   text-decoration: none;
   color: #EF9834;
-  padding-left: 1rem;
   margin-left: 1rem;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+#header-laptop #nav a:hover {
+  -webkit-text-decoration: underline #EF9834;
+          text-decoration: underline #EF9834;
 }
 
 button {
@@ -174,6 +189,31 @@ button:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  /*
+  #left{
+      width: 100%;
+      #pictures{
+          position: relative;
+          width: 100%;
+          :not(#burger){
+              display: none;
+          }
+          img{
+              position: absolute;
+          }
+          #burger{
+              width: 100%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);   
+              animation: 3s ease-in-out 1s infinite alternate burger;
+          }
+          @keyframes burger {
+              to {scale: 1.05; left:55%}
+          }
+      }
+  }*/
 }
 #first #right {
   display: flex;
@@ -235,12 +275,243 @@ button:hover {
   #first #left {
     width: 50%;
   }
+  #first #left #pictures #burger {
+    width: 100%;
+  }
+  @keyframes burger {
+    to {
+      scale: 1.05;
+    }
+  }
   #first #right {
     width: 50%;
     padding: 0 5%;
   }
 }
 @media only screen and (min-width: 1000px) {
+  #first #left #pictures :not(#burger) {
+    display: block;
+  }
+  #first #left #pictures #burger {
+    width: 34%;
+    transform: rotate(30deg);
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    animation: none;
+    z-index: 1;
+    animation: 3s ease-in-out 1s infinite alternate burger;
+  }
+  @keyframes burger {
+    to {
+      width: 35.5%;
+      top: 49%;
+      left: 31%;
+    }
+  }
+  #first #left #pictures #green_onion1 {
+    width: 10%;
+    transform: rotate(20deg);
+    top: 10%;
+    left: 20%;
+    z-index: 2;
+    animation: 3s ease-in-out 1s infinite alternate greenOnion1;
+  }
+  @keyframes greenOnion1 {
+    to {
+      rotate: -5deg;
+      left: 19.5%;
+      filter: blur(1px);
+      width: 10.1%;
+    }
+  }
+  #first #left #pictures #green_onion2 {
+    width: 17%;
+    transform: rotate(60deg);
+    top: 60%;
+    left: 25%;
+    z-index: 13;
+    filter: blur(1px);
+    animation: 3s ease-in-out 1s infinite alternate greenOnion2;
+  }
+  @keyframes greenOnion2 {
+    to {
+      rotate: 3deg;
+      left: 24%;
+      filter: blur(2px);
+      width: 17.5%;
+    }
+  }
+  #first #left #pictures #red_onion1 {
+    width: 4%;
+    transform: rotate(-30deg);
+    top: 40%;
+    left: 43%;
+    z-index: 4;
+    filter: blur(1px);
+    animation: 3s ease-in-out 1s infinite alternate redOnion1;
+  }
+  @keyframes redOnion1 {
+    to {
+      rotate: 4deg;
+      filter: blur(2px);
+      width: 4.2%;
+      left: 42.5%;
+    }
+  }
+  #first #left #pictures #red_onion2 {
+    width: 7%;
+    transform: rotate(-90deg);
+    top: 25%;
+    left: 15%;
+    z-index: 5;
+    filter: blur(1px);
+    animation: 3s ease-in-out 1s infinite alternate redOnion2;
+  }
+  @keyframes redOnion2 {
+    to {
+      rotate: 6deg;
+    }
+  }
+  #first #left #pictures #red_onion3 {
+    width: 9%;
+    top: 55%;
+    left: 40%;
+    z-index: 6;
+    filter: blur(1px);
+    animation: 3s ease-in-out 1s infinite alternate redOnion3;
+  }
+  @keyframes redOnion3 {
+    to {
+      rotate: 4deg;
+      filter: blur(3px);
+      width: 9.05%;
+      left: 39%;
+    }
+  }
+  #first #left #pictures #red_onion4 {
+    width: 15%;
+    transform: rotate(180deg);
+    top: 75%;
+    left: 10%;
+    z-index: 7;
+    filter: blur(2px);
+    animation: 3s ease-in-out 1s infinite alternate redOnion4;
+  }
+  @keyframes redOnion4 {
+    to {
+      rotate: -5deg;
+      filter: blur(5px);
+      width: 15.3%;
+      left: 9.5%;
+    }
+  }
+  #first #left #pictures #tomato1 {
+    width: 7%;
+    top: 35%;
+    left: 45%;
+    z-index: 8;
+    filter: blur(2px);
+    animation: 3s ease-in-out 1s infinite alternate rotateRight;
+  }
+  #first #left #pictures #tomato2 {
+    width: 8%;
+    top: 35%;
+    left: 5%;
+    z-index: 9;
+    filter: blur(2px);
+    animation: 3s ease-in-out 1s infinite alternate rotateLeft;
+  }
+  #first #left #pictures #tomato3 {
+    width: 12%;
+    top: 55%;
+    left: 20%;
+    z-index: 10;
+    filter: blur(3px);
+    animation: 3s ease-in-out 1s infinite alternate rotateRight;
+  }
+  #first #left #pictures #tomato4 {
+    width: 15%;
+    top: 75%;
+    left: 40%;
+    z-index: 11;
+    filter: blur(2px);
+    animation: 3s ease-in-out 1s infinite alternate tomato4;
+  }
+  @keyframes tomato4 {
+    to {
+      rotate: 4deg;
+      filter: blur(4px);
+      width: 15.3%;
+      left: 39.5%;
+    }
+  }
+  #first #left #pictures #salt2 {
+    width: 61%;
+    left: -5%;
+    bottom: 0%;
+    z-index: 0;
+    animation: 3s ease-in-out 1s infinite alternate salt2;
+    filter: blur(2px);
+  }
+  @keyframes salt2 {
+    to {
+      filter: blur(3px);
+      width: 60.5%;
+      left: -6%;
+    }
+  }
+  #first #left #pictures #salt1 {
+    width: 61%;
+    right: -20%;
+    top: 0%;
+    transform: scaleY(-1);
+    animation: 3s ease-in-out 1s infinite alternate salt1;
+    filter: blur(2px);
+  }
+  @keyframes salt1 {
+    to {
+      filter: blur(3px);
+      width: 60.5%;
+      right: -19%;
+    }
+  }
+  #first #left #pictures #smoke {
+    width: 62%;
+    left: 20%;
+    top: -10%;
+    z-index: 0;
+    animation: 3s ease-in-out 1s infinite alternate smoke;
+  }
+  @keyframes smoke {
+    to {
+      width: 59%;
+      top: 0%;
+    }
+  }
+  #first #left #pictures #salt {
+    width: 61%;
+    z-index: 15;
+    top: 20%;
+    filter: blur(2px);
+    animation: 3s ease-in-out 1s infinite alternate salt;
+  }
+  @keyframes salt {
+    to {
+      width: 60%;
+      filter: blur(3px);
+    }
+  }
+  @keyframes rotateLeft {
+    to {
+      rotate: -10deg;
+    }
+  }
+  @keyframes rotateRight {
+    to {
+      rotate: 10deg;
+    }
+  }
   #second iframe {
     height: 70vh;
   }
