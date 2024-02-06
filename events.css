@@ -90,15 +90,7 @@ section img{
     color: white;
     
 }
-.intro button{
-    background-color: #FD0003;
-    padding: 10px 50px;
-    border: 1px solid #591F1D;
-    border-radius: 5px;
-    color: #fff;
-    font-family: Poppins;
-    font-weight: 500;
-}
+
 
 
 .landingpage{
@@ -562,3 +554,58 @@ a{
     --transform-from: 0;
     --transform-to: var(--transform);
 }
+
+.cn{
+width: 160px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #EF9834;
+  border-radius: 50px;
+  margin-left: 1%;
+  cursor: pointer;
+}
+
+.cn:hover{
+    border: none;
+  color: black;
+  background: #EF9834;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.cn a:hover {
+    color: black;
+  }
+
+  a .cn {
+    text-decoration: none;
+    color: white;
+    font-family: "Michroma", sans-serif;
+  }
+
+  .sliderev{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    margin: 0rem;
+    overflow: hidden;
+    position: relative;
+  }
+  #image-track {
+    
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%); 
+    user-select: none; /* -- Prevent image highlighting -- */
+  }
+  
+  #image-track > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% center;
+  }
+  
