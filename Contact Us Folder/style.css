@@ -109,11 +109,15 @@ img {
           text-decoration: underline #EF9834;
 }
 
+#header-laptop #nav a:is(:link, :active, :visited).active {
+  text-decoration: underline #EF9834;
+}
+
 #header-laptop {
   width: 100%;
   position: fixed;
   z-index: 1;
-  height: 8rem !important;
+  height: 6rem !important;
   display: flex;
   font-family: "Michroma", sans-serif;
   z-index: 100000000;
@@ -183,234 +187,99 @@ button:hover {
   }
 }
 #first {
-  width: 100%;
-  position: fixed;
-  overflow-y: hidden;
-  background-color: #0E0001;
-}
-#first #right #fire {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100%;
-}
-#first #right #pictures {
-  position: relative;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+  /*
+  #left{
+      width: 100%;
+      #pictures{
+          position: relative;
+          width: 100%;
+          :not(#burger){
+              display: none;
+          }
+          img{
+              position: absolute;
+          }
+          #burger{
+              width: 100%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);   
+              animation: 3s ease-in-out 1s infinite alternate burger;
+          }
+          @keyframes burger {
+              to {scale: 1.05; left:55%}
+          }
+      }
+  }*/
+}
+#first #right {
+  display: flex;
+  flex-direction: column;
+}
+#first #right h1, #first #right h3, #first #right p {
+  padding-bottom: 0.5rem;
+}
+#first #right form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+#first #right form button {
+  margin-top: 2rem;
+}
+
+#second {
+  position: relative;
+}
+#second iframe {
   width: 100%;
+  height: 50vh;
 }
-#first #right #pictures :not(#burger) {
-  display: none;
-}
-#first #right #pictures img {
-  position: absolute;
-}
-#first #right #pictures #burger {
-  width: 100%;
+#second #info {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: 3s ease-in-out 1s infinite alternate burger;
-}
-@keyframes burger {
-  to {
-    scale: 1.05;
-    left: 55%;
-  }
-}
-#first #left {
-  padding-left: 4rem;
-  width: 75%;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-#first #left h1 {
-  font-size: 2.5rem;
-  color: #E55A32;
-}
-
-#second {
-  padding: 4rem;
-  margin-top: 100vh;
-  background-color: #0E0001;
-  position: relative;
-}
-#second img {
+  width: 80%;
+  border-radius: 7px;
+  padding: 0 5% 5% 5%;
   overflow-y: hidden;
 }
-#second p {
-  color: #CACACA;
-}
-#second #top {
-  padding: 4rem 0;
-  z-index: 1;
-}
-#second #top #left h2 {
-  margin: 0.5rem 0;
-}
-#second #bottom {
-  z-index: 1;
-}
-#second #bottom .rows {
-  display: flex;
-  flex-direction: column;
-  padding: 3rem 0;
-  width: 100%;
-}
-#second #bottom .rows img {
-  width: 100%;
-}
-#second #bottom .rows h3 {
-  padding: 2rem 0 0.5rem 0;
-}
-#second #bottom div:nth-child(even) .left {
-  order: 2;
-}
-#second #background {
-  width: 100%;
-  height: 250%;
-  position: absolute;
-  top: 100vh;
-  left: 0;
-  z-index: -1;
-  display: none;
-}
-#second #background img {
-  position: absolute;
-}
-#second #background img:nth-child(1) {
-  width: 20%;
-  top: 20%;
-  left: 17%;
-}
-#second #background img:nth-child(2) {
-  width: 22%;
-  top: 11%;
-  left: 32%;
-}
-#second #background img:nth-child(3) {
-  width: 15%;
-  top: 27%;
-  left: 40%;
-}
-#second #background img:nth-child(4) {
-  width: 30%;
-  top: 40%;
-  right: 15%;
-}
-#second #background img:nth-child(5) {
-  width: 10%;
-  top: 34%;
-  right: 17%;
-}
-#second #background img:nth-child(6) {
-  width: 20%;
-  top: 50%;
-  left: 40%;
-  transform: rotate(90deg);
-}
-#second #background img:nth-child(7) {
-  width: 17%;
-  top: 65%;
-  left: 15%;
-  transform: rotate(90deg);
-}
-#second #background img:nth-child(8) {
-  width: 10%;
-  top: 59%;
-  left: 15%;
-  transform: rotate(45deg);
-}
-#second #background img:nth-child(9) {
-  width: 17%;
-  top: 70%;
-  left: 40%;
-}
-#second #background img:nth-child(10) {
-  width: 45%;
-  top: 70%;
-  left: 40%;
-}
-#second #background img:nth-child(11) {
-  width: 15%;
-  top: 85%;
-  right: 42%;
-}
-
-#third {
-  padding: 14%;
-  position: relative;
-  background-color: #0E0001;
-}
-#third #intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  text-align: center;
-}
-#third #intro hr {
-  width: 10%;
-  margin-top: 1%;
-  border: 1px solid #E03C31;
-}
-#third #intro p {
-  padding: 1% 20%;
-}
-#third #third-container {
-  position: relative;
-  width: 80%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-}
-#third #third-container #vid-wrapper {
-  height: 100%;
-  z-index: 3;
-}
-#third #third-container #vid-wrapper video {
-  width: 100%;
-}
-#third #third-container #vid-wrapper #darker {
-  width: 100%;
-  height: 15%;
+#second #info #bottom {
+  background-color: #FFFFFF;
+  opacity: 0.2;
+  z-index: 0;
+  padding: 5% 5% 10% 5%;
   position: absolute;
   top: 0;
-  box-shadow: 0px 0px 4rem 4rem #0E0001 inset;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-#third #third-container #members {
-  padding-top: 20%;
+#second #info #top {
   position: relative;
   z-index: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 80%;
 }
-#third #third-container #members .member {
-  width: 100%;
-  padding-bottom: 20%;
-}
-#third #third-container #members .member img {
-  width: 100%;
-}
-#third #third-container #members .member #right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+#second #info #top h3 {
+  padding-top: 5%;
 }
 
 @media only screen and (min-width: 500px) {
-  #first #right #fire {
-    display: block;
+  #first {
+    flex-direction: row;
   }
-  #first #right #pictures #burger {
+  #first #left {
+    width: 50%;
+  }
+  #first #left #pictures #burger {
     width: 100%;
   }
   @keyframes burger {
@@ -418,49 +287,16 @@ button:hover {
       scale: 1.05;
     }
   }
-  #first #left {
+  #first #right {
     width: 50%;
-  }
-  #first #left h1 {
-    font-size: 3rem !important;
-  }
-  #first #left p {
-    margin: 2rem 0;
-  }
-  #second #bottom .rows {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #second #bottom div:nth-child(even) .left {
-    order: 0;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    padding-right: 5%;
-  }
-  #second #bottom div:nth-child(even) .right {
-    width: 50%;
-  }
-  #second #bottom div:nth-child(odd) .right {
-    order: 0;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    padding-left: 5%;
-  }
-  #second #bottom div:nth-child(odd) .left {
-    width: 50%;
+    padding: 0 5%;
   }
 }
 @media only screen and (min-width: 1000px) {
-  #first #right #pictures :not(#burger) {
+  #first #left #pictures :not(#burger) {
     display: block;
   }
-  #first #right #pictures #burger {
+  #first #left #pictures #burger {
     width: 34%;
     transform: rotate(30deg);
     top: 50%;
@@ -477,7 +313,7 @@ button:hover {
       left: 31%;
     }
   }
-  #first #right #pictures #green_onion1 {
+  #first #left #pictures #green_onion1 {
     width: 10%;
     transform: rotate(20deg);
     top: 10%;
@@ -493,7 +329,7 @@ button:hover {
       width: 10.1%;
     }
   }
-  #first #right #pictures #green_onion2 {
+  #first #left #pictures #green_onion2 {
     width: 17%;
     transform: rotate(60deg);
     top: 60%;
@@ -510,7 +346,7 @@ button:hover {
       width: 17.5%;
     }
   }
-  #first #right #pictures #red_onion1 {
+  #first #left #pictures #red_onion1 {
     width: 4%;
     transform: rotate(-30deg);
     top: 40%;
@@ -527,7 +363,7 @@ button:hover {
       left: 42.5%;
     }
   }
-  #first #right #pictures #red_onion2 {
+  #first #left #pictures #red_onion2 {
     width: 7%;
     transform: rotate(-90deg);
     top: 25%;
@@ -541,7 +377,7 @@ button:hover {
       rotate: 6deg;
     }
   }
-  #first #right #pictures #red_onion3 {
+  #first #left #pictures #red_onion3 {
     width: 9%;
     top: 55%;
     left: 40%;
@@ -557,7 +393,7 @@ button:hover {
       left: 39%;
     }
   }
-  #first #right #pictures #red_onion4 {
+  #first #left #pictures #red_onion4 {
     width: 15%;
     transform: rotate(180deg);
     top: 75%;
@@ -574,7 +410,7 @@ button:hover {
       left: 9.5%;
     }
   }
-  #first #right #pictures #tomato1 {
+  #first #left #pictures #tomato1 {
     width: 7%;
     top: 35%;
     left: 45%;
@@ -582,7 +418,7 @@ button:hover {
     filter: blur(2px);
     animation: 3s ease-in-out 1s infinite alternate rotateRight;
   }
-  #first #right #pictures #tomato2 {
+  #first #left #pictures #tomato2 {
     width: 8%;
     top: 35%;
     left: 5%;
@@ -590,7 +426,7 @@ button:hover {
     filter: blur(2px);
     animation: 3s ease-in-out 1s infinite alternate rotateLeft;
   }
-  #first #right #pictures #tomato3 {
+  #first #left #pictures #tomato3 {
     width: 12%;
     top: 55%;
     left: 20%;
@@ -598,7 +434,7 @@ button:hover {
     filter: blur(3px);
     animation: 3s ease-in-out 1s infinite alternate rotateRight;
   }
-  #first #right #pictures #tomato4 {
+  #first #left #pictures #tomato4 {
     width: 15%;
     top: 75%;
     left: 40%;
@@ -614,7 +450,7 @@ button:hover {
       left: 39.5%;
     }
   }
-  #first #right #pictures #salt2 {
+  #first #left #pictures #salt2 {
     width: 61%;
     left: -5%;
     bottom: 0%;
@@ -629,7 +465,7 @@ button:hover {
       left: -6%;
     }
   }
-  #first #right #pictures #salt1 {
+  #first #left #pictures #salt1 {
     width: 61%;
     right: -20%;
     top: 0%;
@@ -644,7 +480,7 @@ button:hover {
       right: -19%;
     }
   }
-  #first #right #pictures #smoke {
+  #first #left #pictures #smoke {
     width: 62%;
     left: 20%;
     top: -10%;
@@ -657,7 +493,7 @@ button:hover {
       top: 0%;
     }
   }
-  #first #right #pictures #salt {
+  #first #left #pictures #salt {
     width: 61%;
     z-index: 15;
     top: 20%;
@@ -680,106 +516,16 @@ button:hover {
       rotate: 10deg;
     }
   }
-  #first #left {
-    width: 30%;
-    position: absolute;
-    right: 10%;
+  #second iframe {
+    height: 70vh;
   }
-  #first #left h1 {
-    font-size: 4rem !important;
-    line-height: 4rem;
+  #second #info {
+    left: 25%;
+    width: auto;
+    padding: 0 2rem 2rem 2rem;
+    border-radius: 7px;
   }
-  #second {
-    padding: 4rem 20%;
-  }
-  #second #top {
-    display: flex;
-    flex-direction: row;
-  }
-  #second #top #left {
-    width: 50%;
-    text-align: right;
-    padding-right: 10%;
-  }
-  #second #top p {
-    width: 50%;
-  }
-  #second #bottom .rows {
-    padding: 1rem 0;
-  }
-  #second #bottom div:nth-child(1) .left {
-    display: flex;
-    justify-content: right;
-  }
-  #second #bottom div:nth-child(1) .left img {
-    width: 70%;
-    margin-right: 10%;
-  }
-  #second #bottom div:nth-child(1) .right {
-    width: 40%;
-  }
-  #second #bottom div:nth-child(2) .right {
-    width: 53%;
-  }
-  #second #bottom div:nth-child(2) .left {
-    width: 35%;
-    text-align: right;
-  }
-  #second #bottom div:nth-child(3) .left {
-    display: flex;
-    justify-content: right;
-  }
-  #second #bottom div:nth-child(3) .left img {
-    width: 85%;
-    margin-right: 10%;
-  }
-  #second #bottom div:nth-child(3) .right {
-    width: 40%;
-    padding-left: 20%;
-  }
-  #second #bottom div:nth-child(4) .right {
-    width: 50%;
-    margin-left: 15%;
-  }
-  #second #bottom div:nth-child(4) .right img {
-    width: 70%;
-  }
-  #second #bottom div:nth-child(4) .left {
-    width: 35%;
-    text-align: right;
-  }
-  #second #background {
-    display: block;
-  }
-  #third #third-container #vid-wrapper {
-    margin-bottom: 10%;
-  }
-  #third #third-container #vid-wrapper #darker {
-    height: 100%;
-  }
-  #third #third-container #members {
-    padding-top: 0;
-    top: 0%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  #third #third-container #members .member {
-    display: flex;
-    flex-direction: row;
-    width: 25rem;
-    padding: 5% 0;
-  }
-  #third #third-container #members .member #right {
-    text-align: left;
-    align-items: start;
-  }
-}
-@media only screen and (min-width: 850px) {
-  #header-mobile {
-    display: none;
-  }
-  #header-laptop {
-    display: block;
+  #second #info p {
+    width: 80%;
   }
 }/*# sourceMappingURL=style.css.map */

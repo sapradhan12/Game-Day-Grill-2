@@ -44,9 +44,18 @@ gsap.to("#header-laptop",{
     scrollTrigger:{
         trigger: "body",
         start: "top top",
+        end: "100vh top",
         scrub: 2,
-        duration:1,
+        duration:1
     },
     backgroundColor: "#0E0001",
     //opacity: 0,
+})
+
+//underline page title for current page
+const activePage = window.location.pathname
+const navLinks = document.querySelectorAll("#header-laptop #top #nav a").forEach(link => {
+    if(link.href.includes(`${activePage}`)){
+        link.classList.add("active");
+    }
 })
