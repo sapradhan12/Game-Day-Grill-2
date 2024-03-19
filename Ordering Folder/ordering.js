@@ -474,4 +474,3 @@ function updateTotalCost() {
 
     document.querySelector('.total').innerText = `$${totalCost.toFixed(2)}`;
 }
-
