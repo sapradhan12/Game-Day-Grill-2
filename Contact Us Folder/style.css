@@ -18,7 +18,7 @@ h1 {
 }
 
 p {
-  font-family: "Protest Revolution", sans-serif;
+  font-family: "Michroma", sans-serif;
   overflow: hidden;
   line-height: 25px;
   word-spacing: 1px;
@@ -27,7 +27,7 @@ p {
 
 h3 {
   color: #E55A32;
-  font-family: "Michroma", sans-serif;
+  font-family: "Protest Revolution", sans-serif;
   font-size: 1rem;
 }
 
@@ -83,6 +83,7 @@ img {
   cursor: pointer;
 }
 #header-mobile #top img {
+  padding-left: 1.5rem;
   height: 2.5rem;
 }
 #header-mobile #container {
@@ -109,9 +110,11 @@ img {
           text-decoration: underline #EF9834;
 }
 
-#header-laptop #nav a:is(:link, :active, :visited).active {
+#header-mobile #container #bottom a:is(:link, :active, :visited).active {
   text-decoration: underline #EF9834;
 }
+
+
 
 #header-laptop {
   width: 100%;
@@ -151,6 +154,10 @@ img {
 #header-laptop #nav a:hover {
   -webkit-text-decoration: underline #EF9834;
           text-decoration: underline #EF9834;
+}
+
+#header-laptop #nav a:is(:link, :active, :visited).active {
+  text-decoration: underline #EF9834;
 }
 
 button {

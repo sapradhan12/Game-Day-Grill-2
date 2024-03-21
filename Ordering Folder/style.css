@@ -28,8 +28,8 @@ p {
 h3 {
   color: #E55A32;
   font-family: "Michroma", sans-serif;
-  font-size: 1rem;
-}
+  font-size: 1.5Frem;
+}F
 
 h2 {
   font-family: "Protest Revolution", sans-serif;
@@ -83,6 +83,7 @@ img {
   cursor: pointer;
 }
 #header-mobile #top img {
+  padding-left: 1.5rem;
   height: 2.5rem;
 }
 #header-mobile #container {
@@ -109,9 +110,11 @@ img {
           text-decoration: underline #EF9834;
 }
 
-#header-laptop #nav a:is(:link, :active, :visited).active {
+#header-mobile #container #bottom a:is(:link, :active, :visited).active {
   text-decoration: underline #EF9834;
 }
+
+
 
 #header-laptop {
   width: 100%;
@@ -151,6 +154,10 @@ img {
 #header-laptop #nav a:hover {
   -webkit-text-decoration: underline #EF9834;
           text-decoration: underline #EF9834;
+}
+
+#header-laptop #nav a:is(:link, :active, :visited).active {
+  text-decoration: underline #EF9834;
 }
 
 button {
@@ -344,6 +351,7 @@ button:hover {
   align-items: center;
   margin-bottom: 5%;
 }
+
 #first .section .inSection {
   display: flex;
   flex-direction: column;
@@ -482,7 +490,7 @@ button:hover {
 .carousel .list .item .introduce .des {
   font-size: small;
   color: white;
-  font-family: "Protest Revolution", sans-serif;
+  font-family: "Michroma", sans-serif;
 }
 
 .carousel .list .item .introduce .seeMore {
@@ -732,6 +740,10 @@ heck .carousel.showDetail .list .item:nth-child(3),
   animation-delay: 1.6s;
 }
 
+.aroundlist {
+  justify-content: space-between;
+}
+
 .arrows {
   position: absolute;
   bottom: 10px;
@@ -863,7 +875,8 @@ heck .carousel.showDetail .list .item:nth-child(3),
   #cart-section #checkoutColumn {
     width: 30rem !important;
   }
-  #first .section h2 {
+  #first .section h1 {
+    font-family: "protest Revolution", sans-serif;
     width: 100%;
     text-align: left;
     padding-left: 30%;
@@ -879,7 +892,8 @@ heck .carousel.showDetail .list .item:nth-child(3),
   }
 }
 @media only screen and (min-width: 1000px) {
-  #first .section h2 {
+  #first .section h1 {
+    font-family: "protest Revolution", sans-serif;
     width: 80%;
     padding: 0;
   }

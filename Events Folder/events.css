@@ -18,17 +18,22 @@ body{
   
 }
 
+#header-mobile #container #bottom a:is(:link, :active, :visited).active {
+    text-decoration: underline #EF9834;
+  }
+
 #header-laptop #nav a:is(:link, :active, :visited).active {
     text-decoration: underline #EF9834;
   }
   
-
- .animation-show{
-    font-family: 'Protest Revolution', sans-serif;
-    margin-bottom: 20px;
+.animation-show h2{
+    text-align: center;
 }
 
-
+.animation-show p {
+    font-family: 'Michroma', sans-serif;
+    margin-bottom: 20px;
+}
 
 section{
     position: relative; 

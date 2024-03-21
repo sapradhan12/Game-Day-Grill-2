@@ -52,9 +52,17 @@ gsap.to("#header-laptop",{
     //opacity: 0,
 })
 
-//underline page title for current page
+//underline page title for current page on laptop
 const activePage = window.location.pathname
 const navLinks = document.querySelectorAll("#header-laptop #top #nav a").forEach(link => {
+    if(link.href.includes(`${activePage}`)){
+        link.classList.add("active");
+    }
+})
+
+//underline page title for current page on mobile
+const activePageMobile = window.location.pathname
+const navLinksMobile = document.querySelectorAll("#header-mobile #container #bottom a").forEach(link => {
     if(link.href.includes(`${activePage}`)){
         link.classList.add("active");
     }
