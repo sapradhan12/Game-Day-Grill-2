@@ -105,6 +105,7 @@ section img{
     background-image: url(../images/eventsbg2.png); 
     display: flex; 
     justify-content: center; 
+
    
    
 }
@@ -116,6 +117,7 @@ section img{
     margin-top: 150px; 
     justify-content: space-around; 
     align-items: center;
+
      
 }
 
@@ -192,6 +194,7 @@ a{
 }
 
 .ab-text{
+    padding-top: 200px;
     padding: 100px, 20%; 
 }
 
@@ -226,7 +229,7 @@ a{
 }
 
 .box{
-    height: 500px; 
+    height: 430px; 
     width: 300px; 
     border-radius: 10px; 
     overflow: hidden; 
@@ -239,6 +242,12 @@ a{
     align-items: center; 
     justify-content: center;
 
+}
+
+@media screen and (max-width: 1500px){
+    .box{
+        margin-left: 30px;
+    }
 }
 
 .box1{
