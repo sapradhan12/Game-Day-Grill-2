@@ -53,8 +53,10 @@ const cart = document.querySelector('#cart');
 const your_order = document.querySelector('#your-order');
 const first = document.querySelector('#first');
 const back1 = document.querySelector('#back1');
+const top_layer = document.querySelector('#top_layer');
 
 cart.addEventListener('click', () => {
+    
     your_order.animate(
         {
             transform: 'translateX(0%)',   
@@ -65,9 +67,23 @@ cart.addEventListener('click', () => {
             easing: 'ease',
         }
 
-    );    
+    );  
+    top_layer.animate(
+        { 
+            display: "block" 
+    },
+        {
+            duration: 500,
+            fill: 'forwards',
+            easing: 'ease',
+        }
+
+    ); 
+    //top_layer.style.display = "block";
+
 })
 back1.addEventListener('click', () => {
+    
     your_order.animate(
         {
             transform: 'translateX(100%)',   
@@ -78,8 +94,23 @@ back1.addEventListener('click', () => {
             easing: 'ease',
         }
 
-    );    
+    );   
+    top_layer.animate(
+        { 
+            display: "none" 
+    },
+        {
+            duration: 50,
+            fill: 'forwards',
+            easing: 'ease',
+        }
+
+    ); 
 })
+top_layer.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+}, true)
 
 //CHECKOUT TRANSITION
 const check1 = document.querySelector('#check1');

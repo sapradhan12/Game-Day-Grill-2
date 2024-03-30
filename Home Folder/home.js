@@ -1,7 +1,51 @@
 gsap.registerPlugin(ScrollTrigger);
 
-//BURGER PARRADOX
 
+let nav_icon = document.querySelector('#nav-icon');
+let nav_count = 0;
+const nav_ham = document.querySelector('#nav-ham');
+let nav_content = document.querySelector('#content');
+function navBar(){
+    nav_count++;
+    nav_ham.checked = nav_count % 2
+    if(nav_ham.checked == 1){
+        nav_content.style.display
+    }
+}
+//ACTIVE FLAME FOR NAV
+function flameActive(x){
+    let img = x.parentElement.firstElementChild;
+    img.animate(
+        {
+            opacity: .7   
+    },
+        {
+            duration: 500,
+            fill: 'forwards',
+            easing: 'ease-in-out',
+        }
+
+    ); 
+}
+function flameUnactive(x){
+    let img = x.parentElement.firstElementChild;
+    img.animate(
+        {
+            opacity: 0   
+    },
+        {
+            duration: 500,
+            fill: 'forwards',
+            easing: 'ease-in-out',
+        }
+
+    ); 
+}
+
+
+
+
+//BURGER PARRADOX
 gsap.to("#burger",{
     scrollTrigger:{
         trigger: "#second",

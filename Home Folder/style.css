@@ -36,6 +36,13 @@ h2 {
   font-size: 2rem;
 }
 
+a {
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  letter-spacing: 0.5rem;
+}
+
 input {
   background: none;
   border: none;
@@ -155,8 +162,28 @@ img {
           text-decoration: underline #EF9834;
 }
 
+<<<<<<< Updated upstream:Home Folder/style.css
 #header-laptop #nav a:is(:link, :active, :visited).active {
   text-decoration: underline #EF9834;
+=======
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+}
+#nav-bar #nav {
+  display: flex;
+  flex-direction: row;
+}
+#nav-bar #nav #icon #bar {
+  width: 10px;
+  height: 5px;
+  background-color: #FFFFFF;
+  padding-bottom: 5px;
+>>>>>>> Stashed changes:Home/style.css
 }
 
 button {
@@ -414,6 +441,121 @@ button:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+}
+#nav-bar #nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  align-items: center;
+}
+#nav-bar #nav #nav-icon {
+  position: absolute;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+}
+#nav-bar #nav #nav-icon input {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background-color: #E03C31;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 15px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out, width 200ms ease-in-out;
+}
+#nav-bar #nav #nav-icon input:checked {
+  opacity: 0;
+  width: 0rem;
+}
+#nav-bar #nav #nav-icon:has(input:checked)::before {
+  rotate: 25deg;
+  width: 34px;
+}
+#nav-bar #nav #nav-icon:has(input:checked)::after {
+  rotate: -25deg;
+  width: 34px;
+}
+#nav-bar #nav #nav-icon::before,
+#nav-bar #nav #nav-icon::after {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background-color: #E03C31;
+  border-radius: 15px;
+  transform-origin: left center;
+  transition: rotate 200ms ease-in-out, width 200ms ease-in-out;
+}
+#nav-bar #nav img {
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#nav-bar #content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#nav-bar #content #background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #460601;
+  opacity: 0.9;
+}
+#nav-bar #content #container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  padding-left: 10%;
+  cursor: pointer;
+}
+#nav-bar #content #container .each {
+  height: 3rem;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20%;
+}
+#nav-bar #content #container .each img {
+  position: relative;
+  width: 20%;
+  opacity: 0;
+}
+#nav-bar #content #container .each a {
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  position: absolute;
+  color: #FFFFFF;
+  transition: -webkit-text-decoration 200ms ease-in-out;
+  transition: text-decoration 200ms ease-in-out;
+  transition: text-decoration 200ms ease-in-out, -webkit-text-decoration 200ms ease-in-out;
 }
 
 @media only screen and (min-width: 500px) {
@@ -783,6 +925,15 @@ button:hover {
   #third #third-container #members .member #right {
     text-align: left;
     align-items: start;
+  }
+  #nav-bar #content #container .each {
+    height: -moz-max-content;
+    height: max-content;
+    margin-bottom: 0;
+  }
+  #nav-bar #nav img {
+    left: 20%;
+    height: 60%;
   }
 }
 @media only screen and (min-width: 850px) {
