@@ -18,7 +18,7 @@ h1 {
 }
 
 p {
-  font-family: "Michroma", sans-serif;
+  font-family: "Protest Revolution", sans-serif;
   overflow: hidden;
   line-height: 25px;
   word-spacing: 1px;
@@ -27,8 +27,8 @@ p {
 
 h3 {
   color: #E55A32;
-  font-family: "Protest Revolution", sans-serif;
-  font-size: 1.rem;
+  font-family: "Michroma", sans-serif;
+  font-size: 1rem;
 }
 
 h2 {
@@ -90,7 +90,6 @@ img {
   cursor: pointer;
 }
 #header-mobile #top img {
-  padding-left: 1.5rem;
   height: 2.5rem;
 }
 #header-mobile #container {
@@ -116,11 +115,6 @@ img {
   -webkit-text-decoration: underline #EF9834;
           text-decoration: underline #EF9834;
 }
-
-#header-mobile #container #bottom a:is(:link, :active, :visited).active {
-  text-decoration: underline #EF9834;
-}
-
 
 #header-laptop {
   width: 100%;
@@ -162,10 +156,6 @@ img {
           text-decoration: underline #EF9834;
 }
 
-<<<<<<< Updated upstream:Home Folder/style.css
-#header-laptop #nav a:is(:link, :active, :visited).active {
-  text-decoration: underline #EF9834;
-=======
 #nav-bar {
   position: fixed;
   top: 0;
@@ -183,7 +173,6 @@ img {
   height: 5px;
   background-color: #FFFFFF;
   padding-bottom: 5px;
->>>>>>> Stashed changes:Home/style.css
 }
 
 button {

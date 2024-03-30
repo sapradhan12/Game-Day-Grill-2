@@ -90,7 +90,6 @@ img {
   cursor: pointer;
 }
 #header-mobile #top img {
-  padding-left: 1.5rem;
   height: 2.5rem;
 }
 #header-mobile #container {
@@ -152,14 +151,11 @@ img {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-
 #header-laptop #nav a:hover {
   -webkit-text-decoration: underline #EF9834;
           text-decoration: underline #EF9834;
 }
 
-<<<<<<< Updated upstream
-=======
 #nav-bar {
   position: fixed;
   top: 0;
@@ -178,7 +174,6 @@ img {
   background-color: #FFFFFF;
   padding-bottom: 5px;
 }
->>>>>>> Stashed changes
 
 button {
   padding: 0.5rem 1rem;
