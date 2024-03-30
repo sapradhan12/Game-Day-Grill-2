@@ -5,11 +5,40 @@ let nav_icon = document.querySelector('#nav-icon');
 let nav_count = 0;
 const nav_ham = document.querySelector('#nav-ham');
 let nav_content = document.querySelector('#content');
+let body = document.querySelector('body');
 function navBar(){
     nav_count++;
-    nav_ham.checked = nav_count % 2
+    nav_ham.checked = nav_count % 2;
     if(nav_ham.checked == 1){
-        nav_content.style.display
+        nav_content.style.display = "block";
+        nav_content.animate(
+            {
+                opacity: 1,  
+        },
+            {
+                duration: 500,
+                fill: 'forwards',
+                easing: 'ease-in-out',
+            }
+    
+        ); 
+    }
+    else{
+        nav_content.animate(
+            {
+                opacity: 0,  
+        },
+            {
+                duration: 500,
+                fill: 'forwards',
+                easing: 'ease-in-out',
+            }
+    
+        ); 
+        setTimeout(() =>{
+            nav_content.style.display = "none"
+        }
+        ,500);
     }
 }
 //ACTIVE FLAME FOR NAV
