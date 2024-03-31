@@ -322,8 +322,7 @@
                 height: 3rem;
                 position: relative;
                 width: 100%;
-                margin-bottom: 20%;
-                cursor: pointer;
+                margin-bottom: 20%;             
                 img{
                     position: relative;
                     width: 20%;
@@ -335,6 +334,7 @@
                     transform: translate(0, -50%);
                     position: absolute;
                     color: $white;
+                    cursor: pointer;
                     transition: font-size 200ms ease-in-out, text-decoration 200ms ease-in-out;
                 }
                 a:after {
@@ -368,13 +368,11 @@
                 }
             }
             #log{
-                width: max-content;
                 a{
                     font-family: $michroma;
                     color: $gray;
                     font-size: 1rem;
                     transition: font-size 200ms ease-in-out;
-                    width: max-content;
                 }
                 a:after {
                     content: '';
@@ -469,6 +467,9 @@
                     i{
                         font-size: 1.5rem;
                     }
+                }
+                #log{
+                    width: max-content;
                 }
             }
         }
