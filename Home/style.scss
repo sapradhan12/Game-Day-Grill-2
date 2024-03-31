@@ -318,12 +318,12 @@
             width: 50%;
             height: 100%;
             padding-left: 10%;
-            cursor: pointer;
             .each{
                 height: 3rem;
                 position: relative;
                 width: 100%;
                 margin-bottom: 20%;
+                cursor: pointer;
                 img{
                     position: relative;
                     width: 20%;
@@ -337,18 +337,26 @@
                     color: $white;
                     transition: text-decoration 200ms ease-in-out;
                 }
-                #social-media{
-                    background-color: blue;
-                    display: flex;
-                    flex-direction: row;
-                    width: 100%;
-                    justify-content: space-between;
-                    a{
-                        i{
-                            color: $white;
-                            font-size: 10rem;
-                        }
-                    }
+            }
+            #social-media{
+                margin: 5rem 0 2rem 0;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-between;
+                link{
+                    background-color: aqua;
+                }
+                i{
+                    font-size: 2rem;
+                    color: $gray;
+                }
+            }
+            #log{
+                a{
+                    font-family: $michroma;
+                    color: $gray;
+                    font-size: 1rem;
                 }
             }
         }
@@ -423,7 +431,18 @@
             }
         }
     }
-
+    #nav-bar{
+        #content{
+            #container{
+                #social-media{
+                    width: 50%;
+                    i{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
 }
 @media only screen and (min-width: 1000px){
     $h1: 4rem !important; 
@@ -717,6 +736,9 @@
                 .each{
                     height: max-content;
                     margin-bottom: 0;
+                }
+                #social-media{
+                    width: 30%;
                 }
             }
         }

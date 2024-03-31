@@ -525,13 +525,13 @@ button:hover {
   width: 50%;
   height: 100%;
   padding-left: 10%;
-  cursor: pointer;
 }
 #nav-bar #content #container .each {
   height: 3rem;
   position: relative;
   width: 100%;
   margin-bottom: 20%;
+  cursor: pointer;
 }
 #nav-bar #content #container .each img {
   position: relative;
@@ -548,16 +548,24 @@ button:hover {
   transition: text-decoration 200ms ease-in-out;
   transition: text-decoration 200ms ease-in-out, -webkit-text-decoration 200ms ease-in-out;
 }
-#nav-bar #content #container .each #social-media {
-  background-color: blue;
+#nav-bar #content #container #social-media {
+  margin: 5rem 0 2rem 0;
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
 }
-#nav-bar #content #container .each #social-media a i {
-  color: #FFFFFF;
-  font-size: 10rem;
+#nav-bar #content #container #social-media link {
+  background-color: aqua;
+}
+#nav-bar #content #container #social-media i {
+  font-size: 2rem;
+  color: #CACACA;
+}
+#nav-bar #content #container #log a {
+  font-family: "Michroma", sans-serif;
+  color: #CACACA;
+  font-size: 1rem;
 }
 
 @media only screen and (min-width: 500px) {
@@ -608,6 +616,12 @@ button:hover {
   }
   #second #bottom div:nth-child(odd) .left {
     width: 50%;
+  }
+  #nav-bar #content #container #social-media {
+    width: 50%;
+  }
+  #nav-bar #content #container #social-media i {
+    font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -932,6 +946,9 @@ button:hover {
     height: -moz-max-content;
     height: max-content;
     margin-bottom: 0;
+  }
+  #nav-bar #content #container #social-media {
+    width: 30%;
   }
   #nav-bar #nav img {
     left: 20%;
