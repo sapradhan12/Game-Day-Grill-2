@@ -544,9 +544,21 @@ button:hover {
   transform: translate(0, -50%);
   position: absolute;
   color: #FFFFFF;
-  transition: -webkit-text-decoration 200ms ease-in-out;
-  transition: text-decoration 200ms ease-in-out;
-  transition: text-decoration 200ms ease-in-out, -webkit-text-decoration 200ms ease-in-out;
+  transition: font-size 200ms ease-in-out, -webkit-text-decoration 200ms ease-in-out;
+  transition: font-size 200ms ease-in-out, text-decoration 200ms ease-in-out;
+  transition: font-size 200ms ease-in-out, text-decoration 200ms ease-in-out, -webkit-text-decoration 200ms ease-in-out;
+}
+#nav-bar #content #container .each a:after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: #FFFFFF;
+  transition: width 200ms ease-in-out;
+  margin-top: 0.5rem;
+}
+#nav-bar #content #container .each a:hover:after {
+  width: 100%;
 }
 #nav-bar #content #container #social-media {
   margin: 5rem 0 2rem 0;
@@ -554,18 +566,39 @@ button:hover {
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-}
-#nav-bar #content #container #social-media link {
-  background-color: aqua;
+  height: 2.1rem;
 }
 #nav-bar #content #container #social-media i {
   font-size: 2rem;
   color: #CACACA;
+  transition: font-size 200ms ease-in-out;
+}
+#nav-bar #content #container #social-media i:hover {
+  font-size: 2.1rem;
+}
+#nav-bar #content #container #log {
+  width: -moz-max-content;
+  width: max-content;
 }
 #nav-bar #content #container #log a {
   font-family: "Michroma", sans-serif;
   color: #CACACA;
   font-size: 1rem;
+  transition: font-size 200ms ease-in-out;
+  width: -moz-max-content;
+  width: max-content;
+}
+#nav-bar #content #container #log a:after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: #CACACA;
+  transition: width 200ms ease-in-out;
+  margin-top: 0.5rem;
+}
+#nav-bar #content #container #log a:hover:after {
+  width: 100%;
 }
 
 @media only screen and (min-width: 500px) {

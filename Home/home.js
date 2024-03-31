@@ -46,7 +46,7 @@ function flameActive(x){
     let img = x.parentElement.firstElementChild;
     img.animate(
         {
-            opacity: .7   
+            opacity: .4   
     },
         {
             duration: 500,
