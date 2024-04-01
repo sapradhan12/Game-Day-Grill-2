@@ -598,6 +598,7 @@ width: 160px;
     text-decoration: none;
     color: white;
     font-family: "Michroma", sans-serif;
+    
   }
 
   .sliderev{
@@ -693,8 +694,14 @@ width: 160px;
     }
 }
 
-button{
-    border-radius: 30px;
+.offer-button{
+     border-radius: 30px;
     margin-left: 40%;
+    
+    
 }
 
+a{
+    height: 100%; 
+    width: 100%; 
+}
