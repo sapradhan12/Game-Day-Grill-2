@@ -62,22 +62,19 @@ img {
   overflow: hidden;
 }
 
-#nav-bar {
+#nav {
+  z-index: 10000;
+  height: 10rem;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000;
-  width: 100%;
-  height: 100%;
-}
-#nav-bar #nav {
-  position: relative;
   display: flex;
   flex-direction: row;
   height: 20%;
   align-items: center;
 }
-#nav-bar #nav #nav-icon {
+#nav #nav-icon {
   position: absolute;
   left: 10%;
   display: flex;
@@ -88,7 +85,7 @@ img {
   width: max-content;
   cursor: pointer;
 }
-#nav-bar #nav #nav-icon input {
+#nav #nav-icon input {
   content: "";
   width: 2rem;
   height: 2px;
@@ -104,20 +101,20 @@ img {
   cursor: pointer;
   transition: opacity 200ms ease-in-out, width 200ms ease-in-out;
 }
-#nav-bar #nav #nav-icon input:checked {
+#nav #nav-icon input:checked {
   opacity: 0;
   width: 0rem;
 }
-#nav-bar #nav #nav-icon:has(input:checked)::before {
+#nav #nav-icon:has(input:checked)::before {
   rotate: 25deg;
   width: 34px;
 }
-#nav-bar #nav #nav-icon:has(input:checked)::after {
+#nav #nav-icon:has(input:checked)::after {
   rotate: -25deg;
   width: 34px;
 }
-#nav-bar #nav #nav-icon::before,
-#nav-bar #nav #nav-icon::after {
+#nav #nav-icon::before,
+#nav #nav-icon::after {
   content: "";
   width: 2rem;
   height: 2px;
@@ -126,48 +123,49 @@ img {
   transform-origin: left center;
   transition: rotate 200ms ease-in-out, width 200ms ease-in-out;
 }
-#nav-bar #nav img {
+#nav img {
   height: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#nav-bar #content {
+
+#content {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
   display: none;
   opacity: 0;
 }
-#nav-bar #content #background {
+#content #background {
   width: 100%;
   height: 100%;
   position: absolute;
   background-color: #460601;
   opacity: 0.9;
 }
-#nav-bar #content #container {
+#content #container {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 50%;
   height: 100%;
   padding-left: 10%;
+  justify-content: center;
 }
-#nav-bar #content #container .each {
-  height: 3rem;
+#content #container .each {
+  height: 4rem;
   position: relative;
   width: 100%;
-  margin-bottom: 20%;
 }
-#nav-bar #content #container .each img {
+#content #container .each img {
   position: relative;
   width: 20%;
   opacity: 0;
 }
-#nav-bar #content #container .each a {
+#content #container .each a {
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
@@ -178,7 +176,7 @@ img {
   transition: font-size 200ms ease-in-out, text-decoration 200ms ease-in-out;
   transition: font-size 200ms ease-in-out, text-decoration 200ms ease-in-out, -webkit-text-decoration 200ms ease-in-out;
 }
-#nav-bar #content #container .each a:after {
+#content #container .each a:after {
   content: "";
   width: 0px;
   height: 2px;
@@ -187,10 +185,10 @@ img {
   transition: width 200ms ease-in-out;
   margin-top: 0.5rem;
 }
-#nav-bar #content #container .each a:hover:after {
+#content #container .each a:hover:after {
   width: 100%;
 }
-#nav-bar #content #container #social-media {
+#content #container #social-media {
   margin: 5rem 0 2rem 0;
   display: flex;
   flex-direction: row;
@@ -198,21 +196,21 @@ img {
   justify-content: space-between;
   height: 2.1rem;
 }
-#nav-bar #content #container #social-media i {
+#content #container #social-media i {
   font-size: 2rem;
   color: #CACACA;
   transition: font-size 200ms ease-in-out;
 }
-#nav-bar #content #container #social-media i:hover {
+#content #container #social-media i:hover {
   font-size: 2.1rem;
 }
-#nav-bar #content #container #log a {
+#content #container #log a {
   font-family: "Michroma", sans-serif;
   color: #CACACA;
   font-size: 1rem;
   transition: font-size 200ms ease-in-out;
 }
-#nav-bar #content #container #log a:after {
+#content #container #log a:after {
   content: "";
   width: 0px;
   height: 2px;
@@ -221,7 +219,7 @@ img {
   transition: width 200ms ease-in-out;
   margin-top: 0.5rem;
 }
-#nav-bar #content #container #log a:hover:after {
+#content #container #log a:hover:after {
   width: 100%;
 }
 
@@ -251,27 +249,27 @@ button:hover {
 }
 
 @media only screen and (min-width: 500px) {
-  #nav-bar #content #container #social-media {
+  #content #container #social-media {
     width: 50%;
   }
-  #nav-bar #content #container #social-media i {
+  #content #container #social-media i {
     font-size: 1.5rem;
   }
-  #nav-bar #content #container #log {
+  #content #container #log {
     width: -moz-max-content;
     width: max-content;
   }
 }
 @media only screen and (min-width: 1000px) {
-  #nav-bar #content #container .each {
+  #content #container .each {
     height: -moz-max-content;
     height: max-content;
     margin-bottom: 0;
   }
-  #nav-bar #content #container #social-media {
+  #content #container #social-media {
     width: 30%;
   }
-  #nav-bar #nav img {
+  #nav img {
     left: 20%;
     height: 60%;
   }
