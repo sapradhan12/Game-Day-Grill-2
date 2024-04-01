@@ -1,3 +1,79 @@
+//NAV BAR
+let nav_icon = document.querySelector('#nav-icon');
+let nav_count = 0;
+const nav_ham = document.querySelector('#nav-ham');
+let nav_content = document.querySelector('#content');
+let body = document.querySelector('body');
+function navBar(){
+    nav_count++;
+    nav_ham.checked = nav_count % 2;
+    if(nav_ham.checked == 1){
+        nav_content.style.display = "block";
+        nav_content.animate(
+            {
+                opacity: 1,  
+        },
+            {
+                duration: 200,
+                fill: 'forwards',
+                easing: 'ease-in-out',
+            }
+    
+        ); 
+    }
+    else{
+        nav_content.animate(
+            {
+                opacity: 0,  
+        },
+            {
+                duration: 200,
+                fill: 'forwards',
+                easing: 'ease-in-out',
+            }
+    
+        ); 
+        setTimeout(() =>{
+            nav_content.style.display = "none"
+        }
+        ,500);
+    }
+}
+//ACTIVE FLAME FOR NAV
+function flameActive(x){
+    let img = x.parentElement.firstElementChild;
+    img.animate(
+        {
+            opacity: .4   
+    },
+        {
+            duration: 500,
+            fill: 'forwards',
+            easing: 'ease-in-out',
+        }
+
+    ); 
+}
+function flameUnactive(x){
+    let img = x.parentElement.firstElementChild;
+    img.animate(
+        {
+            opacity: 0   
+    },
+        {
+            duration: 500,
+            fill: 'forwards',
+            easing: 'ease-in-out',
+        }
+
+    ); 
+}
+
+//
+
+
+
+
 function alertSimple(){
   window.alert("Thank you!");
 }
@@ -39,31 +115,4 @@ gsap.ticker.lagSmoothing(0)
 gsap.registerPlugin(ScrollTrigger);
 
 
-//NAV BAR
-gsap.to("#header-laptop",{
-    scrollTrigger:{
-        trigger: "body",
-        start: "top top",
-        end: "100vh top",
-        scrub: 2,
-        duration:1
-    },
-    backgroundColor: "#0E0001",
-    //opacity: 0,
-})
 
-//underline page title for current page on laptop
-const activePage = window.location.pathname
-const navLinks = document.querySelectorAll("#header-laptop #top #nav a").forEach(link => {
-    if(link.href.includes(`${activePage}`)){
-        link.classList.add("active");
-    }
-})
-
-//underline page title for current page on mobile
-const activePageMobile = window.location.pathname
-const navLinksMobile = document.querySelectorAll("#header-mobile #container #bottom a").forEach(link => {
-    if(link.href.includes(`${activePage}`)){
-        link.classList.add("active");
-    }
-})

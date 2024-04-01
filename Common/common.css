@@ -62,100 +62,6 @@ img {
   overflow: hidden;
 }
 
-#header-mobile {
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  font-family: "Michroma", sans-serif;
-  z-index: 100000000;
-}
-#header-mobile #top {
-  width: 100%;
-  height: 4rem;
-  background-color: #0E0001;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#header-mobile #top #after {
-  display: none;
-}
-#header-mobile #top i {
-  position: absolute;
-  right: 2rem;
-  font-size: 1.5rem;
-  color: #EF9834;
-}
-#header-mobile #top i:hover {
-  cursor: pointer;
-}
-#header-mobile #top img {
-  height: 2.5rem;
-}
-#header-mobile #container {
-  background-color: #0E0001;
-  display: none;
-}
-#header-mobile #container #bottom {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-}
-#header-mobile #container #bottom a {
-  text-decoration: none;
-  color: #EF9834;
-  padding: 0 0 2rem 0;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-}
-#header-mobile #container #bottom a:hover {
-  -webkit-text-decoration: underline #EF9834;
-          text-decoration: underline #EF9834;
-}
-
-#header-laptop {
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  height: 6rem !important;
-  display: flex;
-  font-family: "Michroma", sans-serif;
-  z-index: 100000000;
-  display: none;
-}
-#header-laptop #top {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0 6rem;
-  justify-content: space-between;
-}
-#header-laptop img {
-  height: 4.5rem;
-}
-#header-laptop #nav {
-  display: flex;
-  justify-content: space-around;
-}
-#header-laptop #nav a {
-  text-decoration: none;
-  color: #EF9834;
-  margin-left: 1rem;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-}
-#header-laptop #nav a:hover {
-  -webkit-text-decoration: underline #EF9834;
-          text-decoration: underline #EF9834;
-}
-
 #nav-bar {
   position: fixed;
   top: 0;
@@ -165,14 +71,158 @@ img {
   height: 100%;
 }
 #nav-bar #nav {
+  position: relative;
   display: flex;
   flex-direction: row;
+  height: 20%;
+  align-items: center;
 }
-#nav-bar #nav #icon #bar {
-  width: 10px;
-  height: 5px;
-  background-color: #FFFFFF;
-  padding-bottom: 5px;
+#nav-bar #nav #nav-icon {
+  position: absolute;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+}
+#nav-bar #nav #nav-icon input {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background-color: #E03C31;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 15px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 200ms ease-in-out, width 200ms ease-in-out;
+}
+#nav-bar #nav #nav-icon input:checked {
+  opacity: 0;
+  width: 0rem;
+}
+#nav-bar #nav #nav-icon:has(input:checked)::before {
+  rotate: 25deg;
+  width: 34px;
+}
+#nav-bar #nav #nav-icon:has(input:checked)::after {
+  rotate: -25deg;
+  width: 34px;
+}
+#nav-bar #nav #nav-icon::before,
+#nav-bar #nav #nav-icon::after {
+  content: "";
+  width: 2rem;
+  height: 2px;
+  background-color: #E03C31;
+  border-radius: 15px;
+  transform-origin: left center;
+  transition: rotate 200ms ease-in-out, width 200ms ease-in-out;
+}
+#nav-bar #nav img {
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#nav-bar #content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+#nav-bar #content #background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #460601;
+  opacity: 0.9;
+}
+#nav-bar #content #container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  padding-left: 10%;
+}
+#nav-bar #content #container .each {
+  height: 3rem;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20%;
+}
+#nav-bar #content #container .each img {
+  position: relative;
+  width: 20%;
+  opacity: 0;
+}
+#nav-bar #content #container .each a {
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  position: absolute;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: font-size 200ms ease-in-out, -webkit-text-decoration 200ms ease-in-out;
+  transition: font-size 200ms ease-in-out, text-decoration 200ms ease-in-out;
+  transition: font-size 200ms ease-in-out, text-decoration 200ms ease-in-out, -webkit-text-decoration 200ms ease-in-out;
+}
+#nav-bar #content #container .each a:after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: #FFFFFF;
+  transition: width 200ms ease-in-out;
+  margin-top: 0.5rem;
+}
+#nav-bar #content #container .each a:hover:after {
+  width: 100%;
+}
+#nav-bar #content #container #social-media {
+  margin: 5rem 0 2rem 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  height: 2.1rem;
+}
+#nav-bar #content #container #social-media i {
+  font-size: 2rem;
+  color: #CACACA;
+  transition: font-size 200ms ease-in-out;
+}
+#nav-bar #content #container #social-media i:hover {
+  font-size: 2.1rem;
+}
+#nav-bar #content #container #log a {
+  font-family: "Michroma", sans-serif;
+  color: #CACACA;
+  font-size: 1rem;
+  transition: font-size 200ms ease-in-out;
+}
+#nav-bar #content #container #log a:after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: #CACACA;
+  transition: width 200ms ease-in-out;
+  margin-top: 0.5rem;
+}
+#nav-bar #content #container #log a:hover:after {
+  width: 100%;
 }
 
 button {
@@ -200,11 +250,29 @@ button:hover {
   background-color: #EF9834;
 }
 
-@media only screen and (min-width: 850px) {
-  #header-mobile {
-    display: none;
+@media only screen and (min-width: 500px) {
+  #nav-bar #content #container #social-media {
+    width: 50%;
   }
-  #header-laptop {
-    display: block;
+  #nav-bar #content #container #social-media i {
+    font-size: 1.5rem;
+  }
+  #nav-bar #content #container #log {
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #nav-bar #content #container .each {
+    height: -moz-max-content;
+    height: max-content;
+    margin-bottom: 0;
+  }
+  #nav-bar #content #container #social-media {
+    width: 30%;
+  }
+  #nav-bar #nav img {
+    left: 20%;
+    height: 60%;
   }
 }/*# sourceMappingURL=common.css.map */
