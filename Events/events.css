@@ -666,6 +666,10 @@ width: 160px;
         background-size: cover;
        
     }
+
+    100%{
+        background: url(../images/s8.png);
+    }
 }
 
 @media screen and (max-width: 1064px){
