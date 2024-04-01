@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Protest Revolution', sans-serif;
+}
+    .banner{
+        min-height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/eventsbg2.png") center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #EF9834;
+        padding-bottom: 20px;
+        font-family: 'Protest Revolution', sans-serif;
+    }
+    .card-container{
+        display: grid;
+        grid-template-columns: 420px 420px;
+    }
+    .card-img{
+        background: url("card-img.jpg") center/cover no-repeat;
+    }
+    .banner h2{
+        padding-bottom: 40px;
+        margin-bottom: 20px;
+        margin-left: 60px;
+        font-family: 'Protest Revolution', sans-serif;
+        color: #EF9834;
+     
+    }
+    .card-content{
+        background: transparent;
+        height: 330px;
+       
+        width: 850px;
+        font-family: 'Protest Revolution', sans-serif;
+    }
+    .card-content h3{
+        text-align: center;
+        color: #EF9834;
+        padding: 25px 0 10px 0;
+        font-size: 26px;
+        font-weight: 500;
+    }
+    .form-row{
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+    }
+    form select, form input{
+        display: block;
+        width: 100%;
+        margin: 15px 12px;
+        padding: 5px;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #EF9834;
+        font-weight: 300;
+        background-color: transparent;
+    }
+    form input[type = text], form input[type = number], form input::placeholder, select{
+        color: #EF9834;
+    }
+    form input[type = submit]{
+        color: #fff;
+        background: #e55a32;
+        padding: 12px 0;
+        border-radius: 20px;
+        cursor: pointer;
+        background: transparent;
+        border: 2px solid #EF9834;
+        border-radius: 50px;
+        cursor: pointer;
+        color: white;
+        font-family: "Michroma", sans-serif;
+     
+    }
+    form input[type = submit]:hover{
+        border: none;
+        color: black;
+        background: #EF9834;
+       
+    }
+@media(max-width: 992px){
+    .card-container{
+        grid-template-columns: 100%;
+        width: 100vw;
+    }
+    .card-img{
+        height: 330px;
+    }
+}
