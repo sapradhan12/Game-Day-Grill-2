@@ -158,15 +158,31 @@ gsap.to("#fish",{
     //opacity: 0,
 })
 
+let dishBackground = document.querySelector('.dishBackground');
+for (const child of dishBackground.children) {
+    gsap.to(child,{
+        scrollTrigger:{
+            trigger: child,
+            start: "center center",
+            scrub: 2,
+            duration:2,
+        },
+        y: -100,
+        opacity: 0,
+    })
+  }
+
+
+
 //SPLIT TEXT
 const split = document.querySelectorAll('.split');
-split.forEach((char,i) =>{
+split.forEach((word,i) =>{
 
-    const text = new SplitType(char, {types: 'char'})
+    const text = new SplitType(word, {types: 'word'})
 
-    gsap.from(text.chars, {
+    gsap.from(text.words, {
         scrollTrigger: {
-            trigger: char,
+            trigger: word,
             start: 'top bottom',
             end: 'top 80%',
             scrub: 2,
