@@ -173,6 +173,34 @@ back2.addEventListener('click', () => {
 
 //APPEND FOOD ITEMS
 
+//Special lists
+let special_dishes_products = [
+    {
+        id: 1,
+        name: "Loaded Nachos",
+        image: "../Picture/Ordering/Appetizers/Download -  Loaded Nachos.png",
+        price: "$9.49"
+    },
+    {
+        id: 2,
+        name: "Creamy Pumpkin Soup",
+        image: "../Picture/Ordering/Appetizers/Download -  Creamy Pumpkin Soup.png",
+        price: "$10.49"
+    },
+    {
+        id: 3,
+        name: "Potato Salad",
+        image: "../Picture/Ordering/Appetizers/Download -  Potato Salad.png",
+        price: "$10.49"
+    },
+    {
+        id: 4,
+        name: "Breast Chicken",
+        image: "../Picture/Ordering/Appetizers/Download - Breast Chicken.png",
+        price: "$6.49"
+    }
+]
+
 //Appetizers lists
 let appetizers_products = [
     {
@@ -380,7 +408,10 @@ let drinks_products = [
         price: "$4.49"
     }
 ]
+
+
 //Plug Items into HTML code
+const special_dishes = document.querySelector('#special_dishes');
 const appetizers = document.querySelector('#appetizers');
 const entrees = document.querySelector('#entrees');
 const sides = document.querySelector('#sides');
@@ -407,12 +438,58 @@ function initApp(listName, forWhat, arrayNum){
         forWhat.appendChild(newDiv);
     })
 }
-initApp(appetizers_products, appetizers, 0);
-initApp(entrees_products, entrees, 1);
-initApp(sides_products, sides, 2);
-initApp(drinks_products, drinks, 3);
 
-let foodItems = [appetizers_products, entrees_products, sides_products, drinks_products];
+/*
+function checkDish(num){
+    if(num == 0){
+        initApp(special_dishes_products, special_dishes, 0);
+    }
+    else if(num == 1){
+        initApp(appetizers_products, appetizers, 1);
+    }
+    else if(num == 2){
+        initApp(entrees_products, entrees, 2);
+    }
+    else if(num == 3){
+        initApp(sides_products, sides, 3);
+    }
+    else if(num == 4){
+        initApp(drinks_products, drinks, 4);
+    }
+}*/
+initApp(special_dishes_products, special_dishes, 0);
+initApp(appetizers_products, appetizers, 1);
+initApp(entrees_products, entrees, 2);
+initApp(sides_products, sides, 3);
+initApp(drinks_products, drinks, 4);
+let special_dishes_cover = document.querySelector('#special_dishes-cover');
+let appetizers_cover = document.querySelector('#appetizers-cover');
+let entrees_cover = document.querySelector('#entrees-cover');
+let sides_cover = document.querySelector('#sides-cover');
+let drink_cover = document.querySelector('#drinks-cover');
+
+
+function checkDish(num){
+    if(num == 0){
+        special_dishes_cover.style.display = 'block';
+    }
+    else if(num == 1){
+        appetizers_cover.style.display = 'block';
+    }
+    else if(num == 2){
+        entrees_cover.style.display = 'block';
+    }
+    else if(num == 3){
+        sides_cover.style.display = 'block';
+    }
+    else if(num == 4){
+        drink_cover.style.display = 'block';
+    }
+}
+
+
+
+let foodItems = [special_dishes_products, appetizers_products, entrees_products, sides_products, drinks_products];
 
 //ADD TO CART
 let middle = document.querySelector('#middle');

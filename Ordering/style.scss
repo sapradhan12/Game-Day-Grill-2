@@ -175,6 +175,36 @@
 #first{
     width: 100%;
     padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    filter{
+        display: flex;
+        padding: 10%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3{
+            margin-bottom: 1rem;
+        }
+        h3:not(h3.hr_bar){
+            cursor: pointer;
+        }
+        h3:not(h3.hr_bar):after {
+            content: '';
+            width: 0px;
+            height: 2px;
+            display: block;
+            background: $orange;
+            transition: width 200ms ease-in-out;
+            margin-top: .5rem;
+        }
+        h3:not(h3.hr_bar):hover:after {
+            width: 100%;
+        }
+        .hr_bar{
+            display: none;
+        }
+    }
     .section{
         display: flex;
         flex-direction: column;
@@ -220,6 +250,10 @@
             }
         }
     }
+
+    //.section:not(#special_dishes-cover){
+        //display: none;
+    //}
 }
 #top_layer{
     width: 100%;
@@ -232,6 +266,66 @@
     display: none;
     z-index: 10;
 }
+
+
+//RESPONSIVE
+@media only screen and (min-width: 500px){
+    
+    #cart-section{
+        #your-order{
+            width: 25rem !important;
+        }
+        #checkoutColumn{
+            width: 30rem !important;
+        }
+    }
+    #first{
+        .section{
+            h2{
+                width: 100%;
+                text-align: left;
+                padding-left: 30%;
+            }
+            .inSection{
+                flex-flow: row wrap;
+                width: 100%;
+                .eachFood{
+                    padding: 0;
+                    margin: 5%;
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1000px){
+    #first{
+        #filter{
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10% 20%;
+            .hr_bar{
+                display: block;
+            }
+        }
+        .section{
+            h2{
+                width: 80%;
+                padding: 0;
+            }
+            .inSection{
+                justify-content: center;
+                width: 80%;
+                
+                .eachFood{
+                    width: 25%;
+                    margin: 3% 0%;
+                }
+            }
+        }
+    }
+}
+
 
 //FROM CATERING
 
@@ -673,54 +767,3 @@
 
 //END CATERING
 
-
-
-//RESPONSIVE
-@media only screen and (min-width: 500px){
-    
-    #cart-section{
-        #your-order{
-            width: 25rem !important;
-        }
-        #checkoutColumn{
-            width: 30rem !important;
-        }
-    }
-    #first{
-        .section{
-            h2{
-                width: 100%;
-                text-align: left;
-                padding-left: 30%;
-            }
-            .inSection{
-                flex-flow: row wrap;
-                width: 100%;
-                .eachFood{
-                    padding: 0;
-                    margin: 5%;
-                    width: 30%;
-                }
-            }
-        }
-    }
-}
-@media only screen and (min-width: 1000px){
-    #first{
-        .section{
-            h2{
-                width: 80%;
-                padding: 0;
-            }
-            .inSection{
-                justify-content: center;
-                width: 80%;
-                
-                .eachFood{
-                    width: 25%;
-                    margin: 3% 0%;
-                }
-            }
-        }
-    }
-}

@@ -68,6 +68,7 @@
         </div>
     </div>
     <!--NAV BAR END-->
+
     <div id="cart-section">
         <div id="icon">
             <i id="cart" class="fa-solid fa-cart-shopping"></i>
@@ -360,22 +361,37 @@
             <button id="back">Go Back</button>
         </div>
     </div>
-
-    <script src="catering.js"></script>
     <div id="first">
-        <div class="section">
+        <!--
+        <div id="filter">
+            <h3 onclick="checkDish(0)" id="special_dishes_filter">Special Dishes</h3>
+            <h3 class="hr_bar">|</h3>
+            <h3 onclick="checkDish(1)" id="appetizers_filter">Appetizers</h3>
+            <h3 class="hr_bar">|</h3>
+            <h3 onclick="checkDish(2)" id="entrees_filter">Entrees</h3>
+            <h3 class="hr_bar">|</h3>
+            <h3 onclick="checkDish(3)" id="sides_filter">Sides</h3>
+            <h3 class="hr_bar">|</h3>
+            <h3 onclick="checkDish(4)" id="drinks_filter">Beverages and Drinks</h3>
+        </div>
+    -->
+        <div id="special_dishes-cover" class="section special_dishes-cover">
+            <h1>Special Dishes</h1>
+            <div class="inSection" id="special_dishes"></div>
+        </div>
+        <div id="appetizers-cover" class="section">
             <h1>Appetizers</h1>
             <div class="inSection" id="appetizers"></div>
         </div>
-        <div class="section">
+        <div id="entrees-cover" class="section">
             <h1>Entrees</h1>
             <div class="inSection" id="entrees"></div>
         </div>
-        <div class="section">
+        <div id="sides-cover" class="section">
             <h1>Sides</h1>
             <div class="inSection" id="sides"></div>
         </div>
-        <div class="section">
+        <div id="drinks-cover" class="section">
             <h1>Beverages and Drinks</h1>
             <div class="inSection" id="drinks"></div>
         </div>
@@ -399,6 +415,7 @@
 
 
 <!--JS-->
+<script src="catering.js"></script>
 <script src="../Common/common.js"></script>
 <script src="../Ordering/ordering.js"></script>
 </html>
