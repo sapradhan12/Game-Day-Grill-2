@@ -1,3 +1,12 @@
+//THANKS POP UP
+function submit(x){
+    document.getElementById("thank").style.display = "block";
+}
+function cancel(){
+    document.getElementById("thank").style.display = "none";
+}
+
+
 //NAV BAR
 let nav_icon = document.querySelector('#nav-icon');
 let nav_count = 0;
