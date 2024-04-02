@@ -177,28 +177,30 @@ back2.addEventListener('click', () => {
 let special_dishes_products = [
     {
         id: 1,
-        name: "Loaded Nachos",
-        image: "../Picture/Ordering/Appetizers/Download -  Loaded Nachos.png",
-        price: "$9.49"
+        name: "Spice Delight Wraps Combo",
+        image: "../images/5.png",
+        price: "$15.49"
     },
     {
         id: 2,
-        name: "Creamy Pumpkin Soup",
-        image: "../Picture/Ordering/Appetizers/Download -  Creamy Pumpkin Soup.png",
-        price: "$10.49"
+        name: "Smokehouse Signature Combo",
+        image: "../images/2.png",
+        price: "$14.49"
     },
     {
         id: 3,
-        name: "Potato Salad",
-        image: "../Picture/Ordering/Appetizers/Download -  Potato Salad.png",
-        price: "$10.49"
+        name: "Touhdown Ribeye Steak Combo",
+        image: "../images/3.png",
+        price: "$18.49"
     },
     {
         id: 4,
-        name: "Breast Chicken",
-        image: "../Picture/Ordering/Appetizers/Download - Breast Chicken.png",
-        price: "$6.49"
+        name: "Spicy Rice Bowl Combo",
+        image: "../images/4.png",
+        price: "$14.49"
     }
+    
+    
 ]
 
 //Appetizers lists
