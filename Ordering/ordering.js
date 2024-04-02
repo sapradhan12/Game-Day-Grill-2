@@ -198,7 +198,35 @@ let special_dishes_products = [
         name: "Spicy Rice Bowl Combo",
         image: "../images/4.png",
         price: "$14.49"
-    }
+    },
+
+    {
+        id: 5,
+        name: "Grilled Delight Shrimps Combo",
+        image: "../images/6.png",
+        price: "$16.49"
+    },
+
+    {
+        id: 6,
+        name: "Spicy Ribeye Steak Dish",
+        image: "../Picture/Home/Dishes/dish2.PNG",
+        price: "$15.49"
+    },
+    {
+        id: 6,
+        name: "Chicken Fiesta Bowl Combo",
+        image: "../images/1.png",
+        price: "$13.49"
+    },
+
+
+  
+   
+    
+
+
+    
     
     
 ]
