@@ -79,12 +79,12 @@
                 <input placeholder="Email" type="email">
                 <input placeholder="Phone Number" type="tel">
                 <input placeholder="Message" type="text">
-                <button onclick="alertSimple()">Submit</button>
+                <button onclick="submit()">Submit</button>
             </form>
         </div>
     </div>
     <div id="second">
-        <iframe src="https://my.atlist.com/map/45e384fc-92c0-49f8-8e56-721939b03483/?share=true" allow="geolocation 'self' https://my.atlist.com"loading="lazy" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        <iframe src="https://my.atlist.com/map/6f0cfee3-83b6-4734-a3b5-4e620e69fc89/?share=true" allow="geolocation 'self' https://my.atlist.com" loading="lazy" frameborder="0" scrolling="no" allowfullscreen ></iframe>
         <div id="info">
             <div id="top">
                 <h3>Address: </h3>
@@ -97,6 +97,13 @@
             </div>
             <div id="bottom"></div>
         </div>
+    </div>
+    <div id="thank">
+        <div id="cover">
+            <h1>SUCCESSFULLY!</h1>
+            <p>Your message has successfully been delivered. We will get back to you as soon as possible!</p>
+        </div>
+    <div onclick="cancel()" id="off">x</div>
     </div>
     
 </body>

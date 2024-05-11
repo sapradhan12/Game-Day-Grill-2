@@ -1,5 +1,5 @@
 //THANKS POP UP
-function submit(x){
+function submit(){
     document.getElementById("thank").style.display = "block";
 }
 function cancel(){
